@@ -100,7 +100,16 @@ dragButton.style.left="6px";
 // ===============================
 // Unlock
 // ===============================
+function unlock(){
 
+    alert("Unlock Called");
+
+    dragging = false;
+
+    transition.style.display = "flex";
+
+    ...
+}
 function unlock(){
 
 dragging=false;

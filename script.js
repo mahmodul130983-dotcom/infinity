@@ -1,3 +1,4 @@
+console.log("Script Loaded");
 // ===============================
 // FOR SUMU ❤️
 // Unlock Animation Script

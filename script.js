@@ -565,6 +565,281 @@ s.remove();
 },2000);
 
 }
+/* ==========================================
+   PART 6.5C
+   Romantic Proposal Animation
+========================================== */
+
+const shanto = document.querySelector(".shanto-character");
+const sumu = document.querySelector(".sumu-character");
+const proposalText = document.querySelector(".proposal-text h2");
+const proposalPara = document.querySelector(".proposal-text p");
+const loveGlow = document.querySelector(".love-glow");
+
+let proposalDone = false;
+
+/*==========================
+  Shanto Walk
+==========================*/
+
+function walkToSumu(){
+
+    if(proposalDone) return;
+
+    let position = 14;
+
+    const walk = setInterval(()=>{
+
+        position += 0.12;
+
+        shanto.style.left = position + "%";
+
+        if(position >= 34){
+
+            clearInterval(walk);
+
+            proposalDone = true;
+
+            startProposal();
+
+        }
+
+    },30);
+
+}
+
+setTimeout(walkToSumu,2500);
+
+/*==========================
+ Proposal Scene
+==========================*/
+
+function startProposal(){
+
+    proposalText.innerHTML =
+    "🌹 Sumu, Every Flower Blooms... But None Are As Beautiful As You 🌹";
+
+    proposalPara.innerHTML =
+    "Every Lily reminds me of your smile.<br>" +
+    "Every Rajanigandha reminds me of your purity.<br><br>" +
+    "If I could choose one place forever,<br>" +
+    "I would choose a life beside you.";
+
+    loveGlow.animate([
+
+        {
+            transform:"translate(-50%,-50%) scale(1)"
+        },
+
+        {
+            transform:"translate(-50%,-50%) scale(1.3)"
+        },
+
+        {
+            transform:"translate(-50%,-50%) scale(1)"
+        }
+
+    ],{
+
+        duration:2500,
+
+        iterations:Infinity
+
+    });
+
+    createFlowerExplosion();
+
+    createHeartRain();
+
+}
+
+/*==========================
+ Flower Explosion
+==========================*/
+
+function createFlowerExplosion(){
+
+    for(let i=0;i<40;i++){
+
+        const flower=document.createElement("img");
+
+        flower.src=
+        Math.random()>0.5
+        ?"assets/img/lily.svg"
+        :"assets/img/rajanigandha.svg";
+
+        flower.style.position="fixed";
+
+        flower.style.width=
+        (30+Math.random()*50)+"px";
+
+        flower.style.left="50%";
+
+        flower.style.top="55%";
+
+        flower.style.pointerEvents="none";
+
+        flower.style.zIndex="999";
+
+        document.body.appendChild(flower);
+
+        const x=(-500+Math.random()*1000);
+
+        const y=(-450+Math.random()*200);
+
+        flower.animate([
+
+            {
+
+                transform:"translate(0,0) scale(.3)",
+
+                opacity:0
+
+            },
+
+            {
+
+                transform:
+                `translate(${x}px,${y}px) rotate(${Math.random()*360}deg)`,
+
+                opacity:1
+
+            },
+
+            {
+
+                transform:
+                `translate(${x}px,${y+180}px) rotate(${Math.random()*720}deg)`,
+
+                opacity:0
+
+            }
+
+        ],{
+
+            duration:5000,
+
+            easing:"ease-out"
+
+        });
+
+        setTimeout(()=>flower.remove(),5000);
+
+    }
+
+}
+
+/*==========================
+ Heart Rain
+==========================*/
+
+function createHeartRain(){
+
+    setInterval(()=>{
+
+        const heart=document.createElement("div");
+
+        heart.innerHTML="💖";
+
+        heart.style.position="fixed";
+
+        heart.style.left=Math.random()*100+"vw";
+
+        heart.style.top="-40px";
+
+        heart.style.fontSize=
+        (18+Math.random()*20)+"px";
+
+        heart.style.pointerEvents="none";
+
+        heart.style.zIndex="999";
+
+        document.body.appendChild(heart);
+
+        heart.animate([
+
+            {
+
+                transform:"translateY(0)",
+
+                opacity:0
+
+            },
+
+            {
+
+                opacity:1
+
+            },
+
+            {
+
+                transform:"translateY(110vh)",
+
+                opacity:0
+
+            }
+
+        ],{
+
+            duration:7000
+
+        });
+
+        setTimeout(()=>heart.remove(),7000);
+
+    },250);
+
+}
+
+/*==========================
+ Sumu Blush Effect
+==========================*/
+
+setInterval(()=>{
+
+    if(!proposalDone) return;
+
+    sumu.animate([
+
+        {
+
+            transform:"translateY(0) scale(1)"
+
+        },
+
+        {
+
+            transform:"translateY(-10px) scale(1.02)"
+
+        },
+
+        {
+
+            transform:"translateY(0) scale(1)"
+
+        }
+
+    ],{
+
+        duration:2200
+
+    });
+
+},2300);
+
+/*==========================
+ Ending Message
+==========================*/
+
+setTimeout(()=>{
+
+    if(!proposalDone) return;
+
+    proposalText.innerHTML =
+    "💍 Will You Stay With Me Forever, Sumu? 💖";
+
+},18000);
 
 setInterval(createSparkle,900);
 

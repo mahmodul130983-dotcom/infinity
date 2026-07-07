@@ -1549,3 +1549,380 @@ i=0;
 }
 
 });
+/* ==========================================
+   PART 6.7
+   Endless Flower Rain + Dream Effect
+========================================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const container=document.getElementById("petal-container");
+
+if(!container) return;
+
+/*==========================
+ Endless Flower Rain
+==========================*/
+
+function flowerRain(){
+
+const flower=document.createElement("img");
+
+const flowers=[
+
+"assets/img/lily.svg",
+
+"assets/img/rajanigandha.svg",
+
+"assets/img/rose.svg"
+
+];
+
+flower.src=
+
+flowers[Math.floor(Math.random()*flowers.length)];
+
+flower.className="fallingFlower";
+
+flower.style.left=Math.random()*100+"vw";
+
+flower.style.width=
+
+(25+Math.random()*55)+"px";
+
+flower.style.animationDuration=
+
+(8+Math.random()*8)+"s";
+
+flower.style.animationDelay=
+
+(Math.random()*2)+"s";
+
+container.appendChild(flower);
+
+setTimeout(()=>{
+
+flower.remove();
+
+},17000);
+
+}
+
+setInterval(flowerRain,180);
+
+/*==========================
+ Dream Particles
+==========================*/
+
+function dreamParticle(){
+
+const p=document.createElement("div");
+
+p.className="dream-particle";
+
+p.innerHTML="✨";
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.top=Math.random()*100+"vh";
+
+p.style.fontSize=
+
+(10+Math.random()*18)+"px";
+
+document.body.appendChild(p);
+
+p.animate([
+
+{
+
+opacity:0,
+
+transform:"scale(.3)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"scale(1.3)"
+
+},
+
+{
+
+opacity:0,
+
+transform:"translateY(-80px)"
+
+}
+
+],{
+
+duration:2500
+
+});
+
+setTimeout(()=>{
+
+p.remove();
+
+},2500);
+
+}
+
+setInterval(dreamParticle,250);
+
+/*==========================
+ Bouquet Explosion
+==========================*/
+
+function bouquetExplosion(){
+
+for(let i=0;i<80;i++){
+
+const img=document.createElement("img");
+
+img.src=
+
+Math.random()>.
+/* ==========================================
+   PART 6.8
+   Grand Finale
+========================================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const ending=document.getElementById("cinematicEnding");
+const endingFlowers=document.querySelector(".endingFlowers");
+const music=document.getElementById("bgMusic");
+const musicBtn=document.getElementById("musicBtn");
+
+if(!ending || !endingFlowers) return;
+
+/*==========================
+ Music Button
+==========================*/
+
+if(musicBtn && music){
+
+musicBtn.onclick=()=>{
+
+if(music.paused){
+
+music.play();
+
+musicBtn.innerHTML="⏸";
+
+}else{
+
+music.pause();
+
+musicBtn.innerHTML="🎵";
+
+}
+
+};
+
+}
+
+/*==========================
+ Grand Finale
+==========================*/
+
+function grandFinale(){
+
+ending.classList.add("show");
+
+const flowers=[
+
+"assets/img/lily.svg",
+
+"assets/img/rajanigandha.svg",
+
+"assets/img/rose.svg"
+
+];
+
+for(let i=0;i<180;i++){
+
+const img=document.createElement("img");
+
+img.src=flowers[Math.floor(Math.random()*flowers.length)];
+
+img.style.position="absolute";
+
+img.style.left=Math.random()*100+"%";
+
+img.style.top=Math.random()*100+"%";
+
+img.style.width=(20+Math.random()*55)+"px";
+
+img.style.transform=
+
+`rotate(${Math.random()*360}deg)`;
+
+endingFlowers.appendChild(img);
+
+img.animate([
+
+{
+
+opacity:0,
+
+transform:"scale(.2)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"scale(1.15)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"scale(1)"
+
+}
+
+],{
+
+duration:2500,
+
+fill:"forwards"
+
+});
+
+}
+
+}
+
+/*==========================
+ Golden Sparkles
+==========================*/
+
+function sparkle(){
+
+const s=document.createElement("div");
+
+s.innerHTML="✨";
+
+s.className="goldSparkle";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(s);
+
+s.animate([
+
+{
+
+opacity:0,
+
+transform:"scale(.2)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"scale(1.4)"
+
+},
+
+{
+
+opacity:0,
+
+transform:"translateY(-120px)"
+
+}
+
+],{
+
+duration:2200
+
+});
+
+setTimeout(()=>{
+
+s.remove();
+
+},2200);
+
+}
+
+setInterval(sparkle,200);
+
+/*==========================
+ Forever Hearts
+==========================*/
+
+function foreverHeart(){
+
+const h=document.createElement("div");
+
+h.innerHTML="❤️";
+
+h.className="foreverHeart";
+
+h.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(h);
+
+h.animate([
+
+{
+
+transform:"translateY(0)",
+
+opacity:0
+
+},
+
+{
+
+opacity:1
+
+},
+
+{
+
+transform:"translateY(-120vh)",
+
+opacity:0
+
+}
+
+],{
+
+duration:7000
+
+});
+
+setTimeout(()=>{
+
+h.remove();
+
+},7000);
+
+}
+
+setInterval(foreverHeart,350);
+
+/*==========================
+ Show Finale
+==========================*/
+
+setTimeout(grandFinale,30000);
+
+});

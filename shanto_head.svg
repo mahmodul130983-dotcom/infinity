@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 320 320">
+
+<defs>
+
+<radialGradient id="skin"
+cx="50%"
+cy="40%">
+
+<stop offset="0%" stop-color="#ffd9b3"/>
+<stop offset="100%" stop-color="#efbf96"/>
+
+</radialGradient>
+
+<linearGradient id="hair"
+x1="0%"
+y1="0%"
+x2="0%"
+y2="100%">
+
+<stop offset="0%" stop-color="#2f2f2f"/>
+<stop offset="100%" stop-color="#111"/>
+
+</linearGradient>
+
+</defs>
+
+<!-- Face -->
+
+<ellipse
+cx="160"
+cy="160"
+rx="78"
+ry="92"
+fill="url(#skin)"/>
+
+<!-- Hair -->
+
+<path
+fill="url(#hair)"
+d="
+M90 135
+C95 65
+225 55
+240 132
+C226 104
+203 96
+181 102
+C160 82
+126 84
+105 104
+Z"/>
+
+<!-- Left Ear -->
+
+<ellipse
+cx="82"
+cy="165"
+rx="12"
+ry="20"
+fill="#efbf96"/>
+
+<!-- Right Ear -->
+
+<ellipse
+cx="238"
+cy="165"
+rx="12"
+ry="20"
+fill="#efbf96"/>
+
+<!-- Eyes -->
+
+<ellipse
+cx="132"
+cy="160"
+rx="7"
+ry="9"
+fill="#222"/>
+
+<ellipse
+cx="188"
+cy="160"
+rx="7"
+ry="9"
+fill="#222"/>
+
+<!-- Eye Highlight -->
+
+<circle
+cx="134"
+cy="157"
+r="2"
+fill="white"/>
+
+<circle
+cx="190"
+cy="157"
+r="2"
+fill="white"/>
+
+<!-- Brows -->
+
+<path
+d="M118 145 L145 142"
+stroke="#222"
+stroke-width="4"
+stroke-linecap="round"/>
+
+<path
+d="M175 142 L202 145"
+stroke="#222"
+stroke-width="4"
+stroke-linecap="round"/>
+
+<!-- Nose -->
+
+<path
+d="
+M160 166
+L156 182
+L165 184"
+stroke="#c8966c"
+stroke-width="2"
+fill="none"
+stroke-linecap="round"/>
+
+<!-- Smile -->
+
+<path
+d="
+M142 205
+Q160 220
+178 205"
+stroke="#8d3d3d"
+stroke-width="3"
+fill="none"
+stroke-linecap="round"/>
+
+<!-- Blush -->
+
+<circle
+cx="115"
+cy="188"
+r="8"
+fill="#ffb6c1"
+opacity=".45"/>
+
+<circle
+cx="205"
+cy="188"
+r="8"
+fill="#ffb6c1"
+opacity=".45"/>
+
+<!-- Neck -->
+
+<rect
+x="148"
+y="245"
+width="24"
+height="34"
+rx="8"
+fill="#efbf96"/>
+
+</svg>

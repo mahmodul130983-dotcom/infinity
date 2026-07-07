@@ -247,3 +247,205 @@ star.remove();
 },1700);
 
 },300);
+/*=========================================
+PART 6.1C
+Dynamic Lily Garden
+=========================================*/
+
+const garden = document.querySelector(".garden");
+
+const lilyTypes = [
+
+"lily-small",
+
+"lily-medium",
+
+"lily-large"
+
+];
+
+function createLily(){
+
+const flower = document.createElement("img");
+
+flower.src = "assets/img/lily.svg";
+
+flower.classList.add("lily-svg");
+
+flower.classList.add(
+
+lilyTypes[
+
+Math.floor(Math.random()*3)
+
+]
+
+);
+
+flower.style.left =
+
+Math.random()*100 + "%";
+
+flower.style.bottom =
+
+80 + Math.random()*120 + "px";
+
+flower.style.animationDelay =
+
+Math.random()*5 + "s";
+
+flower.style.opacity =
+
+0.8 + Math.random()*0.2;
+
+flower.style.transform =
+
+"rotate(" +
+
+(-8 + Math.random()*16)
+
++
+
+"deg)";
+
+garden.appendChild(flower);
+
+}
+
+/* Create Initial Flowers */
+
+for(let i=0;i<25;i++){
+
+createLily();
+
+}
+
+/* New Lily Every Few Seconds */
+
+setInterval(()=>{
+
+createLily();
+
+if(garden.children.length>55){
+
+garden.removeChild(garden.children[0]);
+
+}
+
+},2500);
+
+/* Fireflies */
+
+function firefly(){
+
+const light=document.createElement("div");
+
+light.className="firefly";
+
+light.style.left=
+
+Math.random()*100+"vw";
+
+light.style.top=
+
+50+Math.random()*50+"vh";
+
+document.body.appendChild(light);
+
+setTimeout(()=>{
+
+light.remove();
+
+},8000);
+
+}
+
+setInterval(firefly,500);
+
+/* Falling Petals */
+
+function petal(){
+
+const p=document.createElement("div");
+
+p.className="petal";
+
+p.innerHTML="🌸";
+
+p.style.left=
+
+Math.random()*100+"vw";
+
+p.style.animationDuration=
+
+6+Math.random()*6+"s";
+
+document.body.appendChild(p);
+
+setTimeout(()=>{
+
+p.remove();
+
+},12000);
+
+}
+
+setInterval(petal,700);
+
+/* Floating Hearts */
+
+function heart(){
+
+const h=document.createElement("div");
+
+h.className="big-heart";
+
+h.innerHTML="💖";
+
+h.style.left=
+
+Math.random()*100+"vw";
+
+h.style.bottom="-50px";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+
+h.remove();
+
+},6000);
+
+}
+
+setInterval(heart,2200);
+
+/* Romantic Quotes */
+
+const quotes=[
+
+"Every Lily reminds me of you, Sumu.",
+
+"Your smile is softer than any flower.",
+
+"The garden blooms because you exist.",
+
+"My favorite flower will always be you."
+
+];
+
+const quoteBox=document.querySelector(".quote");
+
+if(quoteBox){
+
+let index=0;
+
+setInterval(()=>{
+
+quoteBox.innerHTML=quotes[index];
+
+index=(index+1)%quotes.length;
+
+},5000);
+
+}

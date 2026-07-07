@@ -941,3 +941,117 @@ img.remove();
 }
 
 setInterval(createPetal,300);
+/* ==========================================
+   PART 6.8
+========================================== */
+
+const ending =
+document.getElementById("cinematicEnding");
+
+const endingFlowers =
+document.querySelector(".endingFlowers");
+
+const music =
+document.getElementById("bgMusic");
+
+const musicBtn =
+document.getElementById("musicBtn");
+
+/* Music */
+
+musicBtn.onclick=()=>{
+
+if(music.paused){
+
+music.play();
+
+musicBtn.innerHTML="⏸";
+
+}else{
+
+music.pause();
+
+musicBtn.innerHTML="🎵";
+
+}
+
+};
+
+/* Ending */
+
+function showEnding(){
+
+ending.classList.add("show");
+
+for(let i=0;i<120;i++){
+
+const flower=document.createElement("img");
+
+flower.src=
+Math.random()>.5?
+
+"assets/img/lily.svg"
+
+:
+
+"assets/img/rajanigandha.svg";
+
+flower.style.position="absolute";
+
+flower.style.width=
+
+(20+Math.random()*50)+"px";
+
+flower.style.left=
+
+Math.random()*100+"%";
+
+flower.style.top=
+
+Math.random()*100+"%";
+
+flower.style.transform=
+
+`rotate(${Math.random()*360}deg)`;
+
+endingFlowers.appendChild(flower);
+
+}
+
+}
+
+/* Automatically show ending after 45 sec */
+
+setTimeout(showEnding,45000);
+
+/* Day/Night Glow */
+
+setInterval(()=>{
+
+document.body.animate([
+
+{
+
+filter:"brightness(1)"
+
+},
+
+{
+
+filter:"brightness(.82)"
+
+},
+
+{
+
+filter:"brightness(1)"
+
+}
+
+],{
+
+duration:6000
+
+});
+
+},6000);

@@ -854,3 +854,49 @@ if(!moon) return;
 moon.style.filter=
 "brightness("+
 (1+Math.random()*0.
+/* ==========================================
+   PART 6.6
+   Unlock System
+========================================== */
+
+const unlockBtn=document.getElementById("unlockBtn");
+
+const unlockPassword=document.getElementById("unlockPassword");
+
+const unlockScreen=document.getElementById("unlockScreen");
+
+const unlockError=document.getElementById("unlockError");
+
+unlockBtn.onclick=function(){
+
+if(unlockPassword.value==="Sumaiya168"){
+
+unlockScreen.style.opacity="0";
+
+unlockScreen.style.transition="1s";
+
+setTimeout(()=>{
+
+unlockScreen.remove();
+
+},1000);
+
+}else{
+
+unlockError.innerHTML="❌ Wrong Password";
+
+unlockPassword.value="";
+
+}
+
+};
+
+unlockPassword.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+unlockBtn.click();
+
+}
+
+});

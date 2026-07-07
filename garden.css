@@ -2739,3 +2739,472 @@ filter:
 drop-shadow(0 0 45px white);
 
 }
+/* ==========================================
+   PART 6.5B
+   Proposal Scene CSS
+========================================== */
+
+.proposal-scene{
+    position:absolute;
+    left:50%;
+    bottom:70px;
+    transform:translateX(-50%);
+    width:100%;
+    height:650px;
+    pointer-events:none;
+    z-index:30;
+}
+
+/*==========================
+    SHANTO
+==========================*/
+
+.shanto-character{
+    position:absolute;
+    left:14%;
+    bottom:0;
+    width:300px;
+    animation:
+        shantoFloat 4s ease-in-out infinite;
+}
+
+.shanto-character img{
+    width:100%;
+    display:block;
+    filter:
+        drop-shadow(0 0 20px rgba(255,255,255,.25));
+}
+
+/*==========================
+      SUMU
+==========================*/
+
+.sumu-character{
+    position:absolute;
+    right:14%;
+    bottom:0;
+    width:300px;
+    animation:
+        sumuFloat 4.5s ease-in-out infinite;
+}
+
+.sumu-character img{
+    width:100%;
+    display:block;
+    filter:
+        drop-shadow(0 0 25px rgba(255,192,203,.35));
+}
+
+/*==========================
+      LOVE GLOW
+==========================*/
+
+.love-glow{
+
+position:absolute;
+
+left:50%;
+
+top:48%;
+
+transform:translate(-50%,-50%);
+
+width:380px;
+
+height:380px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(255,170,210,.35),
+transparent 70%);
+
+animation:loveGlow 3s ease-in-out infinite;
+
+filter:blur(20px);
+
+}
+
+/*==========================
+      ROSE SHADOW
+==========================*/
+
+.rose-shadow{
+
+position:absolute;
+
+left:38%;
+
+bottom:180px;
+
+width:70px;
+
+height:18px;
+
+border-radius:50%;
+
+background:rgba(0,0,0,.18);
+
+filter:blur(8px);
+
+}
+
+/*==========================
+      GRASS
+==========================*/
+
+.grass-floor{
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:-5px;
+
+height:80px;
+
+background:
+linear-gradient(
+to top,
+#0f7a2f,
+#35b94f
+);
+
+}
+
+/*==========================
+   PROPOSAL TEXT
+==========================*/
+
+.proposal-text{
+
+position:absolute;
+
+top:70px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:70%;
+
+text-align:center;
+
+color:#fff;
+
+z-index:40;
+
+}
+
+.proposal-text h2{
+
+font-size:2.5rem;
+
+line-height:1.4;
+
+font-weight:700;
+
+text-shadow:0 0 15px rgba(255,255,255,.4);
+
+}
+
+.proposal-text strong{
+
+color:#ff9ac5;
+
+}
+
+.proposal-text p{
+
+margin-top:25px;
+
+font-size:1.15rem;
+
+line-height:2;
+
+color:#f5f5f5;
+
+}
+
+/*==========================
+ FLOWER RING
+==========================*/
+
+.flower-ring{
+
+position:absolute;
+
+left:50%;
+
+top:53%;
+
+transform:translate(-50%,-50%);
+
+width:430px;
+
+height:430px;
+
+border-radius:50%;
+
+animation:ringRotate 28s linear infinite;
+
+}
+
+.flower-ring img{
+
+position:absolute;
+
+width:85px;
+
+height:85px;
+
+}
+
+.flower-ring img:nth-child(1){
+
+top:-10px;
+left:170px;
+
+}
+
+.flower-ring img:nth-child(2){
+
+right:0;
+top:90px;
+
+}
+
+.flower-ring img:nth-child(3){
+
+right:35px;
+bottom:70px;
+
+}
+
+.flower-ring img:nth-child(4){
+
+left:170px;
+bottom:-10px;
+
+}
+
+.flower-ring img:nth-child(5){
+
+left:30px;
+bottom:70px;
+
+}
+
+.flower-ring img:nth-child(6){
+
+left:0;
+top:90px;
+
+}
+
+/*==========================
+FLOATING HEARTS
+==========================*/
+
+.floating-love span{
+
+position:absolute;
+
+bottom:60px;
+
+font-size:24px;
+
+opacity:0;
+
+animation:heartUp 8s linear infinite;
+
+}
+
+.floating-love span:nth-child(1){
+
+left:18%;
+
+animation-delay:0s;
+
+}
+
+.floating-love span:nth-child(2){
+
+left:35%;
+
+animation-delay:2s;
+
+}
+
+.floating-love span:nth-child(3){
+
+left:50%;
+
+animation-delay:4s;
+
+}
+
+.floating-love span:nth-child(4){
+
+left:65%;
+
+animation-delay:6s;
+
+}
+
+.floating-love span:nth-child(5){
+
+left:82%;
+
+animation-delay:1s;
+
+}
+
+/*==========================
+ LIGHT RAYS
+==========================*/
+
+.light-rays{
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+transform:translateX(-50%);
+
+width:600px;
+
+height:500px;
+
+pointer-events:none;
+
+}
+
+.light-rays div{
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+width:3px;
+
+height:300px;
+
+background:linear-gradient(
+transparent,
+rgba(255,255,255,.45),
+transparent);
+
+transform-origin:top;
+
+}
+
+.light-rays div:nth-child(1){transform:rotate(-25deg);}
+.light-rays div:nth-child(2){transform:rotate(-12deg);}
+.light-rays div:nth-child(3){transform:rotate(0deg);}
+.light-rays div:nth-child(4){transform:rotate(12deg);}
+.light-rays div:nth-child(5){transform:rotate(25deg);}
+
+/*==========================
+ ANIMATIONS
+==========================*/
+
+@keyframes shantoFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}
+
+@keyframes sumuFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+@keyframes loveGlow{
+
+0%,100%{
+
+transform:translate(-50%,-50%) scale(1);
+
+opacity:.45;
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.12);
+
+opacity:.9;
+
+}
+
+}
+
+@keyframes ringRotate{
+
+from{
+
+transform:translate(-50%,-50%) rotate(0deg);
+
+}
+
+to{
+
+transform:translate(-50%,-50%) rotate(360deg);
+
+}
+
+}
+
+@keyframes heartUp{
+
+0%{
+
+transform:translateY(0) scale(.3);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-550px) scale(1.4);
+
+opacity:0;
+
+}
+
+}

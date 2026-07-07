@@ -431,3 +431,237 @@ document.addEventListener("DOMContentLoaded", () => {
     },3000);
 
 });
+/* ==========================================
+   PART 6.4
+   Premium Romantic Effects
+========================================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const shanto=document.querySelector(".shanto-character");
+const sumu=document.querySelector(".sumu-character");
+const glow=document.querySelector(".love-glow");
+const proposal=document.querySelector(".proposal-text");
+
+if(!shanto || !sumu || !glow) return;
+
+/*==========================
+ Rose Floating
+==========================*/
+
+const rose=document.createElement("img");
+
+rose.src="assets/img/rose.svg";
+
+rose.className="proposal-rose";
+
+shanto.appendChild(rose);
+
+/*==========================
+ Love Glow
+==========================*/
+
+setInterval(()=>{
+
+glow.animate([
+
+{
+transform:"translate(-50%,-50%) scale(1)",
+opacity:.45
+},
+
+{
+transform:"translate(-50%,-50%) scale(1.4)",
+opacity:1
+},
+
+{
+transform:"translate(-50%,-50%) scale(1)",
+opacity:.45
+}
+
+],{
+
+duration:2200
+
+});
+
+},2200);
+
+/*==========================
+ Heart Beam
+==========================*/
+
+function createHeart(){
+
+const h=document.createElement("div");
+
+h.innerHTML="💖";
+
+h.style.position="fixed";
+
+h.style.left="50%";
+
+h.style.top="55%";
+
+h.style.fontSize=
+(16+Math.random()*20)+"px";
+
+h.style.pointerEvents="none";
+
+h.style.zIndex="999";
+
+document.body.appendChild(h);
+
+const x=(-180+Math.random()*360);
+
+const y=(-220+Math.random()*120);
+
+h.animate([
+
+{
+
+transform:"translate(0,0) scale(.3)",
+
+opacity:0
+
+},
+
+{
+
+transform:`translate(${x}px,${y}px) scale(1.2)`,
+
+opacity:1
+
+},
+
+{
+
+transform:`translate(${x}px,${y-80}px)`,
+
+opacity:0
+
+}
+
+],{
+
+duration:3500
+
+});
+
+setTimeout(()=>{
+
+h.remove();
+
+},3500);
+
+}
+
+setInterval(createHeart,400);
+
+/*==========================
+ Sumu Smile
+==========================*/
+
+setInterval(()=>{
+
+sumu.animate([
+
+{
+
+transform:"translateY(0)"
+
+},
+
+{
+
+transform:"translateY(-8px) scale(1.02)"
+
+},
+
+{
+
+transform:"translateY(0)"
+
+}
+
+],{
+
+duration:2600
+
+});
+
+},2800);
+
+/*==========================
+ Shanto Float
+==========================*/
+
+setInterval(()=>{
+
+shanto.animate([
+
+{
+
+transform:"translateY(0)"
+
+},
+
+{
+
+transform:"translateY(-6px)"
+
+},
+
+{
+
+transform:"translateY(0)"
+
+}
+
+],{
+
+duration:2500
+
+});
+
+},2500);
+
+/*==========================
+ Romantic Text
+==========================*/
+
+if(proposal){
+
+proposal.animate([
+
+{
+
+opacity:.6
+
+},
+
+{
+
+opacity:1
+
+},
+
+{
+
+opacity:.6
+
+}
+
+],{
+
+duration:3000,
+
+iterations:Infinity
+
+});
+
+}
+
+});
+

@@ -900,3 +900,44 @@ unlockBtn.click();
 }
 
 });
+/* ==========================================
+   PART 6.7
+========================================== */
+
+const petalContainer =
+document.getElementById("petal-container");
+
+function createPetal(){
+
+const img=document.createElement("img");
+
+const flowers=[
+"assets/img/lily.svg",
+"assets/img/rajanigandha.svg"
+];
+
+img.src=
+flowers[Math.floor(Math.random()*flowers.length)];
+
+img.className="petal";
+
+img.style.left=
+Math.random()*100+"vw";
+
+img.style.width=
+(25+Math.random()*45)+"px";
+
+img.style.animationDuration=
+(8+Math.random()*8)+"s";
+
+petalContainer.appendChild(img);
+
+setTimeout(()=>{
+
+img.remove();
+
+},17000);
+
+}
+
+setInterval(createPetal,300);

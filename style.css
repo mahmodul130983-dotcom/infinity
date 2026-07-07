@@ -684,3 +684,44 @@ drop-shadow(0 0 40px pink);
 cursor:pointer;
 
 }
+/* ==========================================
+   PART 6.4
+========================================== */
+
+.proposal-rose{
+
+position:absolute;
+
+right:-25px;
+
+top:70px;
+
+width:90px;
+
+animation:roseMove 2s ease-in-out infinite;
+
+filter:drop-shadow(0 0 18px #ff6fa8);
+
+}
+
+@keyframes roseMove{
+
+0%{
+
+transform:rotate(-6deg);
+
+}
+
+50%{
+
+transform:rotate(6deg);
+
+}
+
+100%{
+
+transform:rotate(-6deg);
+
+}
+
+}

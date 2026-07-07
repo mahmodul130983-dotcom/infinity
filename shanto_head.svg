@@ -1,166 +1,1248 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 320 320">
+     viewBox="0 0 220 220">
 
-<defs>
+  <defs>
 
-<radialGradient id="skin"
-cx="50%"
-cy="40%">
+    <radialGradient id="skin"
+                    cx="50%"
+                    cy="35%"
+                    r="70%">
+      <stop offset="0%" stop-color="#FFD9B8"/>
+      <stop offset="100%" stop-color="#F2B98E"/>
+    </radialGradient>
 
-<stop offset="0%" stop-color="#ffd9b3"/>
-<stop offset="100%" stop-color="#efbf96"/>
+    <linearGradient id="hair"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%">
 
-</radialGradient>
+      <stop offset="0%" stop-color="#2B2B2B"/>
+      <stop offset="60%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#000000"/>
 
-<linearGradient id="hair"
-x1="0%"
-y1="0%"
-x2="0%"
-y2="100%">
+    </linearGradient>
 
-<stop offset="0%" stop-color="#2f2f2f"/>
-<stop offset="100%" stop-color="#111"/>
+  </defs>
 
-</linearGradient>
+  <!-- Neck -->
 
-</defs>
+  <rect
+      x="93"
+      y="165"
+      width="34"
+      height="36"
+      rx="12"
+      fill="url(#skin)"/>
 
-<!-- Face -->
+  <!-- Face -->
 
-<ellipse
-cx="160"
-cy="160"
-rx="78"
-ry="92"
-fill="url(#skin)"/>
+  <ellipse
+      cx="110"
+      cy="102"
+      rx="58"
+      ry="68"
+      fill="url(#skin)"/>
 
-<!-- Hair -->
+  <!-- Hair Back -->
+
+  <path
+      d="
+      M55 100
+      C48 30 165 15 170 90
+      L170 60
+      C165 5 60 5 48 65
+      Z"
+      fill="url(#hair)"/>
+
+  <!-- Main Hair -->
+
+  <path
+      d="
+      M52 93
+
+      C50 28
+      82 12
+      110 10
+
+      C150 10
+      172 32
+      171 86
+
+      C160 58
+      145 46
+      130 42
+
+      C118 38
+      106 39
+      95 43
+
+      C82 47
+      70 56
+      58 78
+
+      Z"
+
+      fill="url(#hair)"/>
+
+  <!-- Stylish Fringe -->
+
+  <path
+      d="
+      M63 66
+
+      C72 58
+      82 54
+      92 57
+
+      C82 66
+      82 79
+      98 86
+
+      C104 72
+      117 63
+      132 65
+
+      C122 77
+      125 90
+      144 97
+
+      C148 80
+      160 70
+      171 72
+
+      C166 94
+      150 106
+      128 108
+
+      C104 110
+      84 103
+      63 86
+
+      Z"
+
+      fill="#050505"/>
+
+  <!-- Hair Shine -->
+
+  <path
+      d="
+      M92 26
+
+      C118 16
+      140 22
+      150 38"
+
+      fill="none"
+      stroke="#4A4A4A"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity=".45"/>
+
+</svg>
+<!-- =========================
+     EYEBROWS
+========================= -->
 
 <path
-fill="url(#hair)"
-d="
-M90 135
-C95 65
-225 55
-240 132
-C226 104
-203 96
-181 102
-C160 82
-126 84
-105 104
-Z"/>
+d="M78 82
+Q92 74 103 81"
+fill="none"
+stroke="#2a1a10"
+stroke-width="4"
+stroke-linecap="round"/>
 
-<!-- Left Ear -->
+<path
+d="M117 81
+Q130 74 144 82"
+fill="none"
+stroke="#2a1a10"
+stroke-width="4"
+stroke-linecap="round"/>
+
+<!-- =========================
+LEFT EYE
+========================= -->
+
+<ellipse
+cx="90"
+cy="96"
+rx="10"
+ry="6"
+fill="white"/>
+
+<circle
+cx="90"
+cy="96"
+r="4"
+fill="#3b2414"/>
+
+<circle
+cx="91"
+cy="95"
+r="1.4"
+fill="white"/>
+
+<!-- =========================
+RIGHT EYE
+========================= -->
+
+<ellipse
+cx="130"
+cy="96"
+rx="10"
+ry="6"
+fill="white"/>
+
+<circle
+cx="130"
+cy="96"
+r="4"
+fill="#3b2414"/>
+
+<circle
+cx="131"
+cy="95"
+r="1.4"
+fill="white"/>
+
+<!-- =========================
+EYELASH LINE
+========================= -->
+
+<path
+d="M80
+  <!-- ==========================================
+     PART 6.3A.3
+     Face Detail & Hair Enhancement
+========================================== -->
+
+<!-- Face Shadow -->
+
+<ellipse
+cx="118"
+cy="118"
+rx="42"
+ry="55"
+fill="#d89b73"
+opacity=".12"/>
+
+<!-- Forehead Highlight -->
+
+<ellipse
+cx="104"
+cy="55"
+rx="18"
+ry="10"
+fill="#ffffff"
+opacity=".20"/>
+
+<!-- Left Cheek Highlight -->
 
 <ellipse
 cx="82"
-cy="165"
+cy="108"
 rx="12"
-ry="20"
-fill="#efbf96"/>
+ry="18"
+fill="#ffffff"
+opacity=".08"/>
 
-<!-- Right Ear -->
+<!-- Right Cheek Highlight -->
 
 <ellipse
-cx="238"
-cy="165"
+cx="138"
+cy="108"
 rx="12"
-ry="20"
-fill="#efbf96"/>
+ry="18"
+fill="#ffffff"
+opacity=".06"/>
 
-<!-- Eyes -->
+<!-- Chin Shadow -->
 
 <ellipse
+cx="110"
+cy="152"
+rx="18"
+ry="8"
+fill="#b67d58"
+opacity=".15"/>
+
+<!-- Hair Texture -->
+
+<path
+d="M76 45
+Q95 35 112 42"
+fill="none"
+stroke="#444"
+stroke-width="2"
+stroke-linecap="round"
+opacity=".45"/>
+
+<path
+d="M90 32
+Q110 28 132 36"
+fill="none"
+stroke="#555"
+stroke-width="2"
+stroke-linecap="round"
+opacity=".35"/>
+
+<path
+d="M122 40
+Q138 45 148 60"
+fill="none"
+stroke="#4d4d4d"
+stroke-width="2"
+stroke-linecap="round"
+opacity=".30"/>
+
+<!-- Hair Shine -->
+
+<path
+d="M85 26
+Q108 14 138 24"
+fill="none"
+stroke="#7d7d7d"
+stroke-width="2"
+stroke-linecap="round"
+opacity=".30"/>
+
+<!-- Ear Detail -->
+
+<path
+d="M55 99
+Q58 104 55 110"
+fill="none"
+stroke="#cc8f66"
+stroke-width="1.5"/>
+
+<path
+d="M165 99
+Q162 104 165 110"
+fill="none"
+stroke="#cc8f66"
+stroke-width="1.5"/>
+
+<!-- Neck Shadow -->
+
+<rect
+x="95"
+y="165"
+width="30"
+height="32"
+rx="10"
+fill="#d89b73"
+opacity=".15"/>
+
+<!-- Soft Face Glow -->
+
+<ellipse
+cx="110"
+cy="100"
+rx="60"
+ry="70"
+fill="white"
+opacity=".03"/>
+  
+  <!-- ==========================================
+     PART 6.3A.4
+     Hair Shine + Premium Face Details
+========================================== -->
+
+<!-- Hair Highlight Layer -->
+
+<path
+d="
+M78 28
+Q108 10 145 28
+Q132 18 110 18
+Q92 18 78 28
+"
+fill="#6d6d6d"
+opacity=".18"/>
+
+<!-- Premium Hair Strands -->
+
+<path
+d="M72 48
+Q82 40 92 48"
+stroke="#555"
+stroke-width="2"
+stroke-linecap="round"
+fill="none"
+opacity=".45"/>
+
+<path
+d="M90 40
+Q105 30 118 40"
+stroke="#555"
+stroke-width="2"
+stroke-linecap="round"
+fill="none"
+opacity=".45"/>
+
+<path
+d="M118 42
+Q132 35 146 46"
+stroke="#555"
+stroke-width="2"
+stroke-linecap="round"
+fill="none"
+opacity=".45"/>
+
+<path
+d="M82 60
+Q110 46 138 60"
+stroke="#444"
+stroke-width="1.8"
+stroke-linecap="round"
+fill="none"
+opacity=".35"/>
+
+<!-- Forehead Glow -->
+
+<ellipse
+cx="110"
+cy="50"
+rx="22"
+ry="8"
+fill="#ffffff"
+opacity=".10"/>
+
+<!-- Nose Highlight -->
+
+<path
+d="M109 100
+Q111 112 112 120"
+stroke="#ffffff"
+stroke-width="1"
+stroke-linecap="round"
+opacity=".25"
+fill="none"/>
+
+<!-- Lip Highlight -->
+
+<path
+d="M99 138
+Q110 142 121 138"
+stroke="#ffffff"
+stroke-width=".8"
+opacity=".25"
+fill="none"/>
+
+<!-- Eye Shine -->
+
+<circle
+cx="92"
+cy="94"
+r="1.2"
+fill="#ffffff"/>
+
+<circle
 cx="132"
-cy="160"
+cy="94"
+r="1.2"
+fill="#ffffff"/>
+
+<!-- Romantic Glow -->
+
+<ellipse
+cx="110"
+cy="100"
+rx="72"
+ry="82"
+fill="#ffffff"
+opacity=".025"/>
+
+<!-- Floating Hearts -->
+
+<text
+x="40"
+y="55"
+font-size="12"
+fill="#ff7aa8"
+opacity=".8">❤</text>
+
+<text
+x="168"
+y="42"
+font-size="10"
+fill="#ff9cbc"
+opacity=".7">❤</text>
+
+<text
+x="182"
+y="78"
+font-size="8"
+fill="#ffb4cf"
+opacity=".6">❤</text>
+  <!-- ==========================================
+     PART 6.3B.1
+     SHANTO BODY (NECK + SHIRT + TORSO)
+========================================== -->
+
+<!-- Neck Shadow -->
+
+<rect
+x="96"
+y="168"
+width="28"
+height="32"
+rx="10"
+fill="#d39b72"
+opacity=".25"/>
+
+<!-- Shirt Collar Left -->
+
+<path
+d="
+M92 188
+L108 202
+L100 216
+L82 196
+Z"
+fill="#ffffff"/>
+
+<!-- Shirt Collar Right -->
+
+<path
+d="
+M128 188
+L112 202
+L120 216
+L138 196
+Z"
+fill="#ffffff"/>
+
+<!-- Collar Shadow -->
+
+<path
+d="
+M108 202
+L112 202
+L110 214
+Z"
+fill="#d8d8d8"/>
+
+<!-- Main Shirt -->
+
+<path
+d="
+M70 198
+
+Q80 180 110 178
+
+Q140 180 150 198
+
+L160 315
+
+Q150 332 110 336
+
+Q70 332 60 315
+
+Z"
+
+fill="#2F6BFF"/>
+
+<!-- Shirt Highlight -->
+
+<path
+d="
+M86 205
+
+Q110 190 134 205
+
+L128 308
+
+Q110 316 92 308
+
+Z"
+
+fill="#4E82FF"
+
+opacity=".45"/>
+
+<!-- Buttons -->
+
+<circle cx="110" cy="220" r="2.8" fill="#ffffff"/>
+
+<circle cx="110" cy="242" r="2.8" fill="#ffffff"/>
+
+<circle cx="110" cy="264" r="2.8" fill="#ffffff"/>
+
+<circle cx="110" cy="286" r="2.8" fill="#ffffff"/>
+
+<!-- Pocket -->
+
+<rect
+
+x="120"
+
+y="225"
+
+width="18"
+
+height="20"
+
+rx="2"
+
+fill="#3D79FF"/>
+
+<!-- Pocket Stitch -->
+
+<line
+
+x1="120"
+
+y1="225"
+
+x2="138"
+
+y2="225"
+
+stroke="#9EC0FF"
+
+stroke-width="1"/>
+
+<!-- Shoulder Shadow -->
+
+<ellipse
+
+cx="78"
+
+cy="203"
+
+rx="12"
+
+ry="7"
+
+fill="#244FD8"
+
+opacity=".35"/>
+
+<ellipse
+
+cx="142"
+
+cy="203"
+
+rx="12"
+
+ry="7"
+
+fill="#244FD8"
+
+opacity=".35"/>
+
+<!-- Shirt Bottom Fold -->
+
+<path
+
+d="
+M60 315
+
+Q110 327 160 315
+
+Q148 340 110 345
+
+Q72 340 60 315
+"
+
+fill="#1F55DD"/>
+
+<!-- Soft Cloth Shine -->
+
+<ellipse
+
+cx="102"
+
+cy="250"
+
+rx="24"
+
+ry="58"
+
+fill="#ffffff"
+
+opacity=".08"/>
+
+<!-- Small Heart Badge -->
+
+<text
+
+x="126"
+
+y="240"
+
+font-size="10"
+
+fill="#ff6fa3">
+
+❤
+
+</text>
+  <!-- ==========================================
+     PART 6.3B.2
+     Arms + Hands
+========================================== -->
+
+<!-- Left Arm -->
+
+<g id="left-arm">
+
+<path
+d="
+M72 205
+Q55 228 52 262
+Q50 284 60 300
+"
+fill="none"
+stroke="#F2BE97"
+stroke-width="18"
+stroke-linecap="round"/>
+
+<!-- Left Sleeve -->
+
+<path
+d="
+M67 197
+Q58 205 53 220
+"
+fill="none"
+stroke="#2F6BFF"
+stroke-width="20"
+stroke-linecap="round"/>
+
+<!-- Left Hand -->
+
+<circle
+cx="60"
+cy="301"
+r="10"
+fill="#F2BE97"/>
+
+<!-- Fingers -->
+
+<line
+x1="56"
+y1="307"
+x2="51"
+y2="316"
+stroke="#D39B72"
+stroke-width="2"
+stroke-linecap="round"/>
+
+<line
+x1="61"
+y1="309"
+x2="60"
+y2="319"
+stroke="#D39B72"
+stroke-width="2"
+stroke-linecap="round"/>
+
+<line
+x1="66"
+y1="306"
+x2="69"
+y2="315"
+stroke="#D39B72"
+stroke-width="2"
+stroke-linecap="round"/>
+
+</g>
+
+<!-- Right Arm -->
+
+<g id="right-arm">
+
+<path
+d="
+M148 205
+Q178 215 190 248
+Q198 270 188 292
+"
+fill="none"
+stroke="#F2BE97"
+stroke-width="18"
+stroke-linecap="round"/>
+
+<!-- Right Sleeve -->
+
+<path
+d="
+M151 198
+Q168 205 178 218
+"
+fill="none"
+stroke="#2F6BFF"
+stroke-width="20"
+stroke-linecap="round"/>
+
+<!-- Right Hand -->
+
+<circle
+cx="188"
+cy="292"
+r="10"
+fill="#F2BE97"/>
+
+<!-- Fingers -->
+
+<line
+x1="183"
+y1="298"
+x2="177"
+y2="307"
+stroke="#D39B72"
+stroke-width="2"
+stroke-linecap="round"/>
+
+<line
+x1="188"
+y1="300"
+x2="188"
+y2="311"
+stroke="#D39B72"
+stroke-width="2"
+stroke-linecap="round"/>
+
+<line
+x1="193"
+y1="297"
+x2="198"
+y2="306"
+stroke="#D39B72"
+stroke-width="2"
+stroke-linecap="round"/>
+
+</g>
+
+<!-- Wrist Shadow -->
+
+<ellipse
+cx="60"
+cy="297"
 rx="7"
-ry="9"
-fill="#222"/>
+ry="3"
+fill="#C98E66"
+opacity=".25"/>
 
 <ellipse
 cx="188"
-cy="160"
+cy="288"
 rx="7"
-ry="9"
-fill="#222"/>
+ry="3"
+fill="#C98E66"
+opacity=".25"/>
+  <!-- ==========================================
+     PART 6.3B.3
+     Premium Rose + Bouquet
+========================================== -->
 
-<!-- Eye Highlight -->
+<!-- =========================
+     RED ROSE
+========================= -->
+
+<g id="rose">
+
+<!-- Stem -->
+
+<path
+d="
+M188 292
+L196 238
+"
+stroke="#2E9B46"
+stroke-width="4"
+stroke-linecap="round"
+fill="none"/>
+
+<!-- Leaves -->
+
+<path
+d="
+M193 262
+Q180 255 182 270
+Q190 272 193 262
+"
+fill="#43B95E"/>
+
+<path
+d="
+M195 248
+Q208 242 206 257
+Q198 257 195 248
+"
+fill="#43B95E"/>
+
+<!-- Rose Petals -->
 
 <circle
-cx="134"
-cy="157"
-r="2"
-fill="white"/>
+cx="196"
+cy="232"
+r="10"
+fill="#D1002F"/>
 
 <circle
 cx="190"
-cy="157"
-r="2"
-fill="white"/>
+cy="230"
+r="6"
+fill="#FF3D6E"/>
 
-<!-- Brows -->
+<circle
+cx="202"
+cy="228"
+r="6"
+fill="#FF4B77"/>
 
-<path
-d="M118 145 L145 142"
-stroke="#222"
-stroke-width="4"
-stroke-linecap="round"/>
+<circle
+cx="196"
+cy="224"
+r="5"
+fill="#FF7098"/>
 
-<path
-d="M175 142 L202 145"
-stroke="#222"
-stroke-width="4"
-stroke-linecap="round"/>
+<!-- Glow -->
 
-<!-- Nose -->
+<circle
+cx="196"
+cy="232"
+r="18"
+fill="#FF4F88"
+opacity=".12"/>
+
+</g>
+
+<!-- =========================
+     FLOWER BOUQUET
+========================= -->
+
+<g id="bouquet">
+
+<!-- Ribbon -->
 
 <path
 d="
-M160 166
-L156 182
-L165 184"
-stroke="#c8966c"
-stroke-width="2"
-fill="none"
-stroke-linecap="round"/>
+M54 288
+L72 318
+L92 288
+Z"
+fill="#FF6699"/>
 
-<!-- Smile -->
+<!-- Wrap -->
 
 <path
 d="
-M142 205
-Q160 220
-178 205"
-stroke="#8d3d3d"
-stroke-width="3"
-fill="none"
-stroke-linecap="round"/>
+M45 236
+L100 236
+L82 300
+L62 300
+Z"
+fill="#F6E5C9"/>
 
-<!-- Blush -->
+<!-- Lily -->
+
+<text
+x="54"
+y="230"
+font-size="22">
+🌸
+</text>
+
+<!-- Rajanigandha -->
+
+<text
+x="70"
+y="222"
+font-size="22">
+🤍
+</text>
+
+<!-- Rose -->
+
+<text
+x="84"
+y="230"
+font-size="22">
+🌹
+</text>
+
+<!-- Small Flowers -->
+
+<text
+x="62"
+y="214"
+font-size="15">
+🌼
+</text>
+
+<text
+x="76"
+y="210"
+font-size="15">
+🌼
+</text>
+
+<!-- Leaves -->
+
+<path
+d="
+M56 242
+Q44 232 48 250
+"
+fill="#43B95E"/>
+
+<path
+d="
+M90 242
+Q103 232 98 250
+"
+fill="#43B95E"/>
+
+<!-- Bouquet Glow -->
 
 <circle
-cx="115"
-cy="188"
-r="8"
-fill="#ffb6c1"
-opacity=".45"/>
+cx="72"
+cy="240"
+r="45"
+fill="#FFDDEE"
+opacity=".08"/>
 
-<circle
-cx="205"
-cy="188"
-r="8"
-fill="#ffb6c1"
-opacity=".45"/>
+</g>
 
-<!-- Neck -->
+<!-- Floating Hearts -->
 
-<rect
-x="148"
-y="245"
-width="24"
-height="34"
-rx="8"
-fill="#efbf96"/>
+<text
+x="165"
+y="205"
+font-size="14"
+fill="#FF5A94"
+opacity=".8">
+❤
+</text>
 
-</svg>
+<text
+x="38"
+y="210"
+font-size="12"
+fill="#FF85AF"
+opacity=".6">
+❤
+</text>
+  <!-- ==========================================
+     PART 6.3B.4
+     Premium Pant + Shoes + Proposal Pose
+     Final Shanto Character Body
+========================================== -->
+
+
+<!-- =========================
+     PREMIUM PANT
+========================= -->
+
+<g id="premium-pant">
+
+  <!-- Left Leg -->
+  <path d="
+  M145 340
+  Q150 410 170 465
+  L188 465
+  L180 340
+  Z"
+  fill="#111827"/>
+
+  <!-- Right Leg -->
+  <path d="
+  M205 340
+  Q205 410 220 465
+  L240 465
+  Q245 400 230 340
+  Z"
+  fill="#0F172A"/>
+
+
+  <!-- Pant Shine -->
+  <path d="
+  M170 350
+  Q175 400 180 440"
+  stroke="#334155"
+  stroke-width="5"
+  fill="none"
+  opacity=".7"/>
+
+</g>
+
+
+<!-- =========================
+     SHOES
+========================= -->
+
+<g id="shoes">
+
+  <!-- Left Shoe -->
+  <path d="
+  M165 460
+  Q150 470 140 482
+  Q155 495 190 490
+  L190 465
+  Z"
+  fill="#FFFFFF"/>
+
+  <!-- Right Shoe -->
+  <path d="
+  M220 462
+  Q240 470 255 482
+  Q245 495 210 490
+  L210 465
+  Z"
+  fill="#FFFFFF"/>
+
+
+  <!-- Shoe Shadow -->
+  <ellipse cx="170" cy="493" rx="30" ry="5"
+  fill="#000000" opacity=".15"/>
+
+  <ellipse cx="225" cy="493" rx="30" ry="5"
+  fill="#000000" opacity=".15"/>
+
+</g>
+
+
+
+<!-- =========================
+     PROPOSAL POSE BODY
+========================= -->
+
+<g id="proposal-pose">
+
+
+  <!-- Body Lean -->
+  <path d="
+  M150 250
+  Q185 265 215 250
+  L225 345
+  Q185 365 145 345
+  Z"
+  fill="#2563EB"/>
+
+
+  <!-- Fold Detail -->
+  <path d="
+  M175 270
+  Q190 290 205 270"
+  stroke="#60A5FA"
+  stroke-width="4"
+  fill="none"/>
+
+
+
+  <!-- One Knee Ground Pose -->
+
+  <path d="
+  M200 350
+  Q230 360 250 390
+  Q260 410 245 430
+  L215 430
+  Q220 400 190 380
+  Z"
+  fill="#1E293B"/>
+
+
+</g>
+
+
+
+<!-- =========================
+     HAND WITH ROSE FORWARD
+========================= -->
+
+<g id="rose-forward">
+
+
+  <!-- Arm -->
+  <path d="
+  M150 270
+  Q110 290 95 320
+  Q100 330 115 325
+  L165 290
+  Z"
+  fill="#FFD6B3"/>
+
+
+  <!-- Hand -->
+  <circle cx="95" cy="320"
+  r="9"
+  fill="#FFD6B3"/>
+
+
+  <!-- Rose -->
+  <g transform="translate(82,300)">
+
+    <path d="
+    M15 45 L25 5"
+    stroke="#2E9B46"
+    stroke-width="4"/>
+
+
+    <circle cx="25" cy="5"
+    r="12"
+    fill="#D1002F"/>
+
+    <circle cx="20" cy="3"
+    r="7"
+    fill="#FF527D"/>
+
+    <circle cx="30" cy="1"
+    r="7"
+    fill="#FF6B91"/>
+
+  </g>
+
+
+</g>
+
+
+
+<!-- =========================
+     BOUQUET HOLDING HAND
+========================= -->
+
+<g id="bouquet-hold">
+
+
+  <path d="
+  M220 280
+  Q260 300 270 330
+  Q260 345 245 330
+  L210 300
+  Z"
+  fill="#FFD6B3"/>
+
+
+  <!-- Bouquet -->
+  <g transform="translate(255,310)">
+
+    <path d="
+    M0 0
+    L45 0
+    L30 65
+    L15 65
+    Z"
+    fill="#F6E5C9"/>
+
+
+    <circle cx="22" cy="-5"
+    r="12"
+    fill="#FF3D6E"/>
+
+    <circle cx="10" cy="5"
+    r="10"
+    fill="#FFFFFF"/>
+
+    <circle cx="35" cy="5"
+    r="10"
+    fill="#FFD1E5"/>
+
+
+    <path d="
+    M15 20 Q5 10 0 

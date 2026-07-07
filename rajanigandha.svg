@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 300 700">
+
+<defs>
+
+<linearGradient id="stem"
+x1="0%"
+y1="0%"
+x2="0%"
+y2="100%">
+
+<stop offset="0%" stop-color="#56d86b"/>
+<stop offset="100%" stop-color="#1d8f3e"/>
+
+</linearGradient>
+
+<radialGradient id="bud">
+
+<stop offset="0%" stop-color="#ffffff"/>
+
+<stop offset="100%" stop-color="#f2f2f2"/>
+
+</radialGradient>
+
+</defs>
+
+<!-- Stem -->
+
+<rect
+x="147"
+y="180"
+width="6"
+height="430"
+rx="5"
+fill="url(#stem)"/>
+
+<!-- Leaves -->
+
+<path
+d="
+M150 330
+C80 280
+65 340
+145 390
+Z"
+fill="#38a84c"/>
+
+<path
+d="
+M150 430
+C220 390
+235 450
+155 500
+Z"
+fill="#44bb5c"/>
+
+<path
+d="
+M150 520
+C90 470
+80 540
+145 575
+Z"
+fill="#3fb14f"/>
+
+<!-- Flower Buds -->
+
+<circle cx="150" cy="175" r="14" fill="url(#bud)"/>
+
+<circle cx="165" cy="195" r="13" fill="url(#bud)"/>
+
+<circle cx="138" cy="210" r="13" fill="url(#bud)"/>
+
+<circle cx="160" cy="228" r="12" fill="url(#bud)"/>
+
+<circle cx="142" cy="245" r="12" fill="url(#bud)"/>
+
+<circle cx="155" cy="263" r="11" fill="url(#bud)"/>
+
+<circle cx="140" cy="280" r="11" fill="url(#bud)"/>
+
+<circle cx="152" cy="298" r="10" fill="url(#bud)"/>
+
+<circle cx="144" cy="316" r="10" fill="url(#bud)"/>
+
+<circle cx="156" cy="334" r="9" fill="url(#bud)"/>
+
+<circle cx="145" cy="352" r="9" fill="url(#bud)"/>
+
+<circle cx="153" cy="370" r="8" fill="url(#bud)"/>
+
+<!-- Glow -->
+
+<circle
+cx="150"
+cy="250"
+r="90"
+fill="white"
+opacity=".05"/>
+
+</svg>

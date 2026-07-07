@@ -2487,3 +2487,255 @@ drop-shadow(0 0 40px pink);
 cursor:pointer;
 
 }
+/*=========================================
+PART 6.2B
+Rajanigandha Animation
+=========================================*/
+
+.rajanigandha-svg{
+
+position:absolute;
+
+width:120px;
+
+height:auto;
+
+bottom:100px;
+
+transform-origin:bottom center;
+
+opacity:0;
+
+animation:
+
+rajanGrow 4s ease forwards,
+
+rajanWind 5s ease-in-out infinite,
+
+rajanGlow 3s ease-in-out infinite;
+
+}
+
+/* Bloom */
+
+@keyframes rajanGrow{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateY(70px)
+
+scale(.2);
+
+}
+
+40%{
+
+opacity:1;
+
+}
+
+70%{
+
+transform:
+
+translateY(-8px)
+
+scale(1.05);
+
+}
+
+100%{
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* Wind */
+
+@keyframes rajanWind{
+
+0%{
+
+transform:rotate(-2deg);
+
+}
+
+25%{
+
+transform:rotate(2deg);
+
+}
+
+50%{
+
+transform:rotate(-1deg);
+
+}
+
+75%{
+
+transform:rotate(3deg);
+
+}
+
+100%{
+
+transform:rotate(-2deg);
+
+}
+
+}
+
+/* Glow */
+
+@keyframes rajanGlow{
+
+0%{
+
+filter:
+
+drop-shadow(0 0 5px white);
+
+}
+
+50%{
+
+filter:
+
+drop-shadow(0 0 18px white)
+
+drop-shadow(0 0 35px #fff);
+
+}
+
+100%{
+
+filter:
+
+drop-shadow(0 0 5px white);
+
+}
+
+}
+
+/* Sparkle */
+
+.rajanigandha-svg::after{
+
+content:"✨";
+
+position:absolute;
+
+top:-20px;
+
+left:50%;
+
+font-size:18px;
+
+animation:
+
+rajanSpark 2.5s linear infinite;
+
+}
+
+@keyframes rajanSpark{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translate(-50%,15px)
+
+scale(.4);
+
+}
+
+40%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+
+translate(-50%,-45px)
+
+scale(1.2);
+
+}
+
+}
+
+/* Positions */
+
+.rajan-left{
+
+left:12%;
+
+}
+
+.rajan-center{
+
+left:48%;
+
+transform:translateX(-50%);
+
+}
+
+.rajan-right{
+
+right:10%;
+
+}
+
+/* Different Sizes */
+
+.rajan-small{
+
+width:90px;
+
+}
+
+.rajan-medium{
+
+width:120px;
+
+}
+
+.rajan-large{
+
+width:160px;
+
+}
+
+/* Hover */
+
+.rajanigandha-svg:hover{
+
+transform:scale(1.08);
+
+transition:.4s;
+
+filter:
+
+drop-shadow(0 0 45px white);
+
+}

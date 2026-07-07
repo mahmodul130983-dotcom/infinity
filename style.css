@@ -816,3 +816,153 @@ filter:drop-shadow(0 0 18px rgba(255,255,255,.8));
 z-index:4;
 
 }
+/* ==========================================
+   PART 6.7
+========================================== */
+
+.fallingFlower{
+
+position:fixed;
+
+top:-80px;
+
+pointer-events:none;
+
+z-index:999;
+
+animation:flowerFall linear forwards;
+
+filter:drop-shadow(0 0 12px rgba(255,255,255,.7));
+
+}
+
+@keyframes flowerFall{
+
+0%{
+
+transform:
+translateY(-100px)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+.dream-particle{
+
+position:fixed;
+
+pointer-events:none;
+
+color:white;
+
+z-index:999;
+
+text-shadow:
+0 0 10px white,
+0 0 20px pink;
+
+}
+/* ==========================================
+   PART 6.8
+========================================== */
+
+.goldSparkle{
+
+position:fixed;
+
+color:#ffe66d;
+
+font-size:18px;
+
+pointer-events:none;
+
+z-index:999999;
+
+text-shadow:
+
+0 0 8px #fff,
+
+0 0 20px gold,
+
+0 0 35px #ffd54f;
+
+}
+
+.foreverHeart{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:28px;
+
+pointer-events:none;
+
+z-index:999999;
+
+filter:
+
+drop-shadow(0 0 10px hotpink);
+
+}
+
+#endingTitle{
+
+animation:endingGlow 3s infinite;
+
+}
+
+@keyframes endingGlow{
+
+0%{
+
+text-shadow:
+
+0 0 10px white,
+
+0 0 20px hotpink;
+
+}
+
+50%{
+
+text-shadow:
+
+0 0 30px white,
+
+0 0 60px hotpink,
+
+0 0 90px deeppink;
+
+}
+
+100%{
+
+text-shadow:
+
+0 0 10px white,
+
+0 0 20px hotpink;
+
+}
+
+}

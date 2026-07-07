@@ -404,3 +404,283 @@ transform:rotate(360deg);
 }
 
 }
+/* ==========================================
+   PART 6.1B
+   Lily SVG Animation
+==========================================*/
+
+/* Lily Container */
+
+.lily-svg{
+
+position:absolute;
+
+width:110px;
+
+height:auto;
+
+transform-origin:bottom center;
+
+animation:
+
+lilyGrow 3s ease forwards,
+
+lilySway 5s ease-in-out infinite,
+
+lilyGlow 3s ease-in-out infinite;
+
+opacity:0;
+
+}
+
+/* Bloom */
+
+@keyframes lilyGrow{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateY(60px)
+
+scale(.15);
+
+}
+
+30%{
+
+opacity:1;
+
+}
+
+70%{
+
+transform:
+
+translateY(-5px)
+
+scale(1.08);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+}
+
+/* Wind */
+
+@keyframes lilySway{
+
+0%{
+
+transform:rotate(-2deg);
+
+}
+
+25%{
+
+transform:rotate(2deg);
+
+}
+
+50%{
+
+transform:rotate(-1deg);
+
+}
+
+75%{
+
+transform:rotate(3deg);
+
+}
+
+100%{
+
+transform:rotate(-2deg);
+
+}
+
+}
+
+/* Glow */
+
+@keyframes lilyGlow{
+
+0%{
+
+filter:
+
+drop-shadow(0 0 5px white);
+
+}
+
+50%{
+
+filter:
+
+drop-shadow(0 0 25px #ffffff)
+
+drop-shadow(0 0 40px #ffd8ef);
+
+}
+
+100%{
+
+filter:
+
+drop-shadow(0 0 5px white);
+
+}
+
+}
+
+/* Floating Sparkles */
+
+.lily-svg::after{
+
+content:"✨";
+
+position:absolute;
+
+top:-12px;
+
+left:50%;
+
+font-size:18px;
+
+animation:
+
+sparkle 2.8s linear infinite;
+
+}
+
+@keyframes sparkle{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translate(-50%,15px)
+
+scale(.3);
+
+}
+
+40%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:
+
+translate(-50%,-45px)
+
+scale(1.2);
+
+}
+
+}
+
+/* Different Sizes */
+
+.lily-small{
+
+width:70px;
+
+animation-delay:.5s;
+
+}
+
+.lily-medium{
+
+width:110px;
+
+animation-delay:1.5s;
+
+}
+
+.lily-large{
+
+width:155px;
+
+animation-delay:2.5s;
+
+}
+
+/* Flower Field Positions */
+
+.lily-left{
+
+left:6%;
+
+bottom:120px;
+
+}
+
+.lily-center{
+
+left:45%;
+
+bottom:145px;
+
+}
+
+.lily-right{
+
+right:8%;
+
+bottom:125px;
+
+}
+
+/* Layering */
+
+.lily-back{
+
+z-index:2;
+
+opacity:.8;
+
+}
+
+.lily-front{
+
+z-index:8;
+
+}
+
+/* Hover Effect */
+
+.lily-svg:hover{
+
+transform:scale(1.08);
+
+transition:.4s;
+
+filter:
+
+drop-shadow(0 0 40px pink);
+
+cursor:pointer;
+
+}

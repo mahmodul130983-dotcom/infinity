@@ -997,3 +997,555 @@ duration:2400
 }
 
 });
+/* ==========================================
+   PART 6.5C
+   Ring + Final Proposal + Forever Scene
+========================================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const shanto=document.querySelector(".shanto-character");
+const sumu=document.querySelector(".sumu-character");
+const proposal=document.querySelector(".proposal-text");
+
+if(!shanto || !sumu || !proposal) return;
+
+/*==========================
+ Ring Animation
+==========================*/
+
+const ring=document.createElement("div");
+
+ring.className="proposal-ring";
+
+ring.innerHTML="💍";
+
+shanto.appendChild(ring);
+
+setTimeout(()=>{
+
+ring.animate([
+
+{
+opacity:0,
+transform:"translate(0,0) scale(.2)"
+},
+
+{
+opacity:1,
+transform:"translate(45px,-20px) scale(1.2)"
+},
+
+{
+opacity:1,
+transform:"translate(85px,-28px) scale(1)"
+}
+
+],{
+
+duration:2500,
+fill:"forwards"
+
+});
+
+},11000);
+
+/*==========================
+ Final Text
+==========================*/
+
+setTimeout(()=>{
+
+proposal.innerHTML=`
+
+<h1 style="font-size:45px;color:#ffd7ef;">
+
+💖 Will You Stay With Me Forever? 💖
+
+</h1>
+
+<p style="font-size:22px;line-height:2;">
+
+Every Lily reminds me of your beauty.<br>
+
+Every Rajanigandha reminds me of your purity.<br>
+
+Every Rose reminds me of my love for you.<br><br>
+
+But none of them can ever become YOU.<br><br>
+
+🌸 Sumu 🌸<br>
+
+You are my favorite flower,
+
+my favorite person,
+
+and my favorite place.
+
+</p>
+
+`;
+
+},14000);
+
+/*==========================
+ Endless Hearts
+==========================*/
+
+function foreverHeart(){
+
+const h=document.createElement("div");
+
+h.innerHTML="💖";
+
+h.style.position="fixed";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.bottom="-50px";
+
+h.style.fontSize=(20+Math.random()*30)+"px";
+
+h.style.pointerEvents="none";
+
+h.style.zIndex="99999";
+
+document.body.appendChild(h);
+
+h.animate([
+
+{
+
+transform:"translateY(0)",
+
+opacity:0
+
+},
+
+{
+
+opacity:1
+
+},
+
+{
+
+transform:"translateY(-120vh)",
+
+opacity:0
+
+}
+
+],{
+
+duration:7000,
+
+easing:"linear"
+
+});
+
+setTimeout(()=>{
+
+h.remove();
+
+},7000);
+
+}
+
+setInterval(foreverHeart,300);
+
+/*==========================
+ Flower Explosion
+==========================*/
+
+setTimeout(()=>{
+
+for(let i=0;i<120;i++){
+
+const img=document.createElement("img");
+
+img.src=Math.random()>.5
+
+?
+
+"assets/img/lily.svg"
+
+:
+
+"assets/img/rajanigandha.svg";
+
+img.style.position="fixed";
+
+img.style.left="50%";
+
+img.style.top="50%";
+
+img.style.width=(25+Math.random()*45)+"px";
+
+img.style.pointerEvents="none";
+
+img.style.zIndex="9999";
+
+document.body.appendChild(img);
+
+const x=-700+Math.random()*1400;
+
+const y=-500+Math.random()*900;
+
+img.animate([
+
+{
+
+transform:"translate(0,0) scale(.2)",
+
+opacity:0
+
+},
+
+{
+
+opacity:1
+
+},
+
+{
+
+transform:`translate(${x}px,${y}px)
+rotate(${Math.random()*720}deg)`,
+
+opacity:0
+
+}
+
+],{
+
+duration:6000,
+
+easing:"ease-out"
+
+});
+
+setTimeout(()=>{
+
+img.remove();
+
+},6000);
+
+}
+
+},14500);
+
+/*==========================
+ Ending Glow
+==========================*/
+
+setTimeout(()=>{
+
+document.body.animate([
+
+{
+
+filter:"brightness(1)"
+
+},
+
+{
+
+filter:"brightness(1.3)"
+
+},
+
+{
+
+filter:"brightness(1)"
+
+}
+
+],{
+
+duration:5000,
+
+iterations:Infinity
+
+});
+
+},15000);
+
+});
+/* ==========================================
+   PART 6.6
+   Magical Night Garden
+========================================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const garden=document.querySelector(".garden");
+
+if(!garden) return;
+
+/*==========================
+ Moon Light Pulse
+==========================*/
+
+const moon=document.querySelector(".moon");
+
+if(moon){
+
+setInterval(()=>{
+
+moon.animate([
+
+{
+transform:"scale(1)",
+filter:"brightness(1)"
+},
+
+{
+transform:"scale(1.08)",
+filter:"brightness(1.35)"
+},
+
+{
+transform:"scale(1)",
+filter:"brightness(1)"
+}
+
+],{
+
+duration:4500
+
+});
+
+},4500);
+
+}
+
+/*==========================
+ Fireflies
+==========================*/
+
+function createFirefly(){
+
+const fly=document.createElement("div");
+
+fly.className="firefly";
+
+fly.style.left=Math.random()*100+"vw";
+
+fly.style.top=(25+Math.random()*70)+"vh";
+
+garden.appendChild(fly);
+
+fly.animate([
+
+{
+
+transform:"translate(0,0)",
+
+opacity:0
+
+},
+
+{
+
+opacity:1
+
+},
+
+{
+
+transform:`translate(${Math.random()*200-100}px,-${100+Math.random()*120}px)`,
+
+opacity:0
+
+}
+
+],{
+
+duration:5000+Math.random()*3000,
+
+easing:"ease-in-out"
+
+});
+
+setTimeout(()=>{
+
+fly.remove();
+
+},8000);
+
+}
+
+setInterval(createFirefly,250);
+
+/*==========================
+ Flower Bloom
+==========================*/
+
+function bloomFlower(){
+
+const img=document.createElement("img");
+
+img.src=Math.random()>0.5
+
+?
+
+"assets/img/lily.svg"
+
+:
+
+"assets/img/rajanigandha.svg";
+
+img.className="magic-flower";
+
+img.style.left=Math.random()*100+"vw";
+
+img.style.bottom=(20+Math.random()*220)+"px";
+
+img.style.width=(45+Math.random()*55)+"px";
+
+garden.appendChild(img);
+
+img.animate([
+
+{
+
+transform:"scale(.2)",
+
+opacity:0
+
+},
+
+{
+
+transform:"scale(1.15)",
+
+opacity:1
+
+},
+
+{
+
+transform:"scale(1)",
+
+opacity:1
+
+}
+
+],{
+
+duration:2500,
+
+fill:"forwards"
+
+});
+
+}
+
+for(let i=0;i<40;i++){
+
+setTimeout(bloomFlower,i*120);
+
+}
+
+/*==========================
+ Floating Sparkles
+==========================*/
+
+setInterval(()=>{
+
+const s=document.createElement("div");
+
+s.innerHTML="✨";
+
+s.style.position="fixed";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.fontSize=(12+Math.random()*18)+"px";
+
+s.style.pointerEvents="none";
+
+document.body.appendChild(s);
+
+s.animate([
+
+{
+
+opacity:0,
+
+transform:"scale(.3)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"scale(1.3)"
+
+},
+
+{
+
+opacity:0,
+
+transform:"scale(.4)"
+
+}
+
+],{
+
+duration:1800
+
+});
+
+setTimeout(()=>{
+
+s.remove();
+
+},1800);
+
+},180);
+
+/*==========================
+ Romantic Message
+==========================*/
+
+const messages=[
+
+"Every Lily smiles because of you 🌸",
+
+"Every Rajanigandha carries your fragrance 🤍",
+
+"You are more beautiful than every flower ❤️",
+
+"My heart blooms whenever I see you 🌹"
+
+];
+
+const title=document.querySelector(".proposal-text h2");
+
+if(title){
+
+let i=0;
+
+setInterval(()=>{
+
+title.innerHTML=messages[i];
+
+i++;
+
+if(i>=messages.length){
+
+i=0;
+
+}
+
+},5000);
+
+}
+
+});

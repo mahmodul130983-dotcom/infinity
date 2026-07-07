@@ -1,3 +1,237 @@
+<!-- ==========================================
+     PART 6.4
+     SHANTO CHARACTER ANIMATION LAYER
+========================================== -->
+
+
+<!-- =========================
+     BLINKING EYES
+========================= -->
+
+<style>
+
+@keyframes blink {
+
+0%,90%,100%{
+transform:scaleY(1);
+}
+
+95%{
+transform:scaleY(.15);
+}
+
+}
+
+
+@keyframes hairMove {
+
+0%,100%{
+transform:rotate(0deg);
+}
+
+50%{
+transform:rotate(3deg);
+}
+
+}
+
+
+@keyframes roseMove {
+
+0%,100%{
+transform:rotate(0deg);
+}
+
+50%{
+transform:rotate(-8deg);
+}
+
+}
+
+
+@keyframes bouquetFloat {
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+
+@keyframes heartFloat {
+
+0%{
+opacity:0;
+transform:translateY(0);
+}
+
+30%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:translateY(-60px);
+}
+
+}
+
+
+@keyframes glowPulse {
+
+0%,100%{
+opacity:.05;
+}
+
+50%{
+opacity:.18;
+}
+
+}
+
+
+
+#eyes{
+animation:blink 4s infinite;
+transform-origin:center;
+}
+
+
+#hair{
+animation:hairMove 3s infinite ease-in-out;
+transform-origin:center;
+}
+
+
+#rose{
+animation:roseMove 2s infinite ease-in-out;
+transform-origin:center;
+}
+
+
+#bouquet{
+animation:bouquetFloat 3s infinite ease-in-out;
+transform-origin:center;
+}
+
+
+#finalGlow{
+animation:glowPulse 3s infinite;
+}
+
+
+.heartParticle{
+animation:heartFloat 4s infinite;
+transform-origin:center;
+}
+
+
+</style>
+
+
+
+<!-- =========================
+     HEART PARTICLES
+========================= -->
+
+
+<g id="heartParticles">
+
+
+<text x="120" y="180"
+font-size="18"
+fill="#FF5A94"
+class="heartParticle">
+❤
+</text>
+
+
+<text x="250" y="220"
+font-size="15"
+fill="#FF85AF"
+class="heartParticle">
+❤
+</text>
+
+
+<text x="100" y="360"
+font-size="12"
+fill="#FF9FC4"
+class="heartParticle">
+❤
+</text>
+
+
+<text x="270" y="350"
+font-size="16"
+fill="#FF5A94"
+class="heartParticle">
+❤
+</text>
+
+
+</g>
+
+
+
+<!-- =========================
+     ROMANTIC LIGHT AURA
+========================= -->
+
+
+<circle id="finalGlow"
+cx="185"
+cy="290"
+r="140"
+fill="#FFB6D9"
+opacity=".1"/>
+
+
+
+<!-- =========================
+     CLOTH MOVEMENT
+========================= -->
+
+
+<path d="
+M145 280
+Q185 295 225 280"
+stroke="#93C5FD"
+stroke-width="3"
+fill="none"
+opacity=".5">
+
+<animate
+attributeName="d"
+dur="3s"
+repeatCount="indefinite"
+values="
+M145 280 Q185 295 225 280;
+M145 280 Q185 285 225 280;
+M145 280 Q185 295 225 280
+"/>
+
+</path>
+
+
+
+<!-- =========================
+     FINAL ROMANTIC EFFECT
+========================= -->
+
+<text x="145"
+y="150"
+font-size="18"
+fill="#FF6699"
+opacity=".8">
+
+♡ Forever ♡
+
+</text>
 <svg xmlns="http://www.w3.org/2000/svg"
      viewBox="0 0 220 220">
 

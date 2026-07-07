@@ -253,7 +253,6 @@ Dynamic Lily Garden
 =========================================*/
 
 const garden = document.querySelector(".garden");
-
 const lilyTypes = [
 
 "lily-small",
@@ -845,62 +844,17 @@ setInterval(createSparkle,900);
 
 /* Moon Glow Effect */
 
-setInterval(()=>{
+setInterval(() => {
 
-const moon=document.querySelector(".moon");
+    const moon = document.querySelector(".moon");
 
-if(!moon) return;
+    if (!moon) return;
 
-moon.style.filter=
-"brightness("+
-(1+Math.random()*0.
-/* ==========================================
-   PART 6.6
-   Unlock System
-========================================== */
+    moon.style.filter =
+        `brightness(${1 + Math.random() * 0.3})`;
 
-const unlockBtn=document.getElementById("unlockBtn");
+}, 1500);
 
-const unlockPassword=document.getElementById("unlockPassword");
-
-const unlockScreen=document.getElementById("unlockScreen");
-
-const unlockError=document.getElementById("unlockError");
-
-unlockBtn.onclick=function(){
-
-if(unlockPassword.value==="Sumaiya168"){
-
-unlockScreen.style.opacity="0";
-
-unlockScreen.style.transition="1s";
-
-setTimeout(()=>{
-
-unlockScreen.remove();
-
-},1000);
-
-}else{
-
-unlockError.innerHTML="❌ Wrong Password";
-
-unlockPassword.value="";
-
-}
-
-};
-
-unlockPassword.addEventListener("keypress",function(e){
-
-if(e.key==="Enter"){
-
-unlockBtn.click();
-
-}
-
-});
-/* ==========================================
    PART 6.7
 ========================================== */
 

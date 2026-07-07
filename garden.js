@@ -664,4 +664,336 @@ iterations:Infinity
 }
 
 });
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="180"
+     height="320"
+     viewBox="0 0 180 320">
 
+    <defs>
+
+        <radialGradient id="petal"
+                        cx="50%"
+                        cy="40%"
+                        r="70%">
+
+            <stop offset="0%"
+                  stop-color="#ffb3c7"/>
+
+            <stop offset="100%"
+                  stop-color="#d40045"/>
+
+        </radialGradient>
+
+        <linearGradient id="stem"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+
+            <stop offset="0%"
+                  stop-color="#4caf50"/>
+
+            <stop offset="100%"
+                  stop-color="#1b5e20"/>
+
+        </linearGradient>
+
+    </defs>
+
+    <!-- Stem -->
+
+    <rect
+        x="86"
+        y="90"
+        width="8"
+        height="190"
+        rx="4"
+        fill="url(#stem)"/>
+
+    <!-- Leaves -->
+
+    <ellipse
+        cx="62"
+        cy="175"
+        rx="28"
+        ry="12"
+        fill="#43a047"
+        transform="rotate(-28 62 175)"/>
+
+    <ellipse
+        cx="118"
+        cy="205"
+        rx="28"
+        ry="12"
+        fill="#43a047"
+        transform="rotate(28 118 205)"/>
+
+    <!-- Rose -->
+
+    <circle
+        cx="90"
+        cy="60"
+        r="18"
+        fill="url(#petal)"/>
+
+    <ellipse
+        cx="90"
+        cy="35"
+        rx="24"
+        ry="18"
+        fill="url(#petal)"/>
+
+    <ellipse
+        cx="70"
+        cy="55"
+        rx="20"
+        ry="15"
+        fill="url(#petal)"
+        transform="rotate(-28 70 55)"/>
+
+    <ellipse
+        cx="110"
+        cy="55"
+        rx="20"
+        ry="15"
+        fill="url(#petal)"
+        transform="rotate(28 110 55)"/>
+
+    <ellipse
+        cx="75"
+        cy="78"
+        rx="18"
+        ry="14"
+        fill="url(#petal)"
+        transform="rotate(-18 75 78)"/>
+
+    <ellipse
+        cx="105"
+        cy="78"
+        rx="18"
+        ry="14"
+        fill="url(#petal)"
+        transform="rotate(18 105 78)"/>
+
+</svg>
+/* ==========================================
+   PART 6.5B
+   Premium Proposal Effects
+========================================== */
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const shanto=document.querySelector(".shanto-character");
+const sumu=document.querySelector(".sumu-character");
+const scene=document.querySelector(".proposal-scene");
+const glow=document.querySelector(".love-glow");
+
+if(!shanto || !sumu || !scene) return;
+
+/*==========================
+ Camera Zoom
+==========================*/
+
+function cameraZoom(){
+
+scene.animate([
+
+{
+transform:"scale(1)"
+},
+
+{
+transform:"scale(1.05)"
+},
+
+{
+transform:"scale(1.08)"
+},
+
+{
+transform:"scale(1)"
+}
+
+],{
+
+duration:5000,
+
+easing:"ease-in-out"
+
+});
+
+}
+
+setTimeout(cameraZoom,6500);
+
+/*==========================
+ Shanto Kneel
+==========================*/
+
+setTimeout(()=>{
+
+shanto.animate([
+
+{
+transform:"translateY(0)"
+},
+
+{
+transform:"translateY(12px) rotate(3deg)"
+},
+
+{
+transform:"translateY(12px) rotate(3deg)"
+}
+
+],{
+
+duration:1800,
+
+fill:"forwards"
+
+});
+
+},8000);
+
+/*==========================
+ Sumu Blush
+==========================*/
+
+setInterval(()=>{
+
+sumu.animate([
+
+{
+filter:"brightness(1)"
+},
+
+{
+filter:"brightness(1.25)"
+},
+
+{
+filter:"brightness(1)"
+}
+
+],{
+
+duration:1800
+
+});
+
+},3500);
+
+/*==========================
+ Heart Aura
+==========================*/
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.innerHTML="💖";
+
+heart.style.position="fixed";
+
+heart.style.left=
+(48+Math.random()*6)+"vw";
+
+heart.style.top=
+(45+Math.random()*10)+"vh";
+
+heart.style.fontSize=
+(18+Math.random()*18)+"px";
+
+heart.style.pointerEvents="none";
+
+heart.style.zIndex="9999";
+
+document.body.appendChild(heart);
+
+heart.animate([
+
+{
+
+transform:"translateY(0) scale(.4)",
+
+opacity:0
+
+},
+
+{
+
+opacity:1
+
+},
+
+{
+
+transform:"translateY(-220px) scale(1.3)",
+
+opacity:0
+
+}
+
+],{
+
+duration:3500,
+
+easing:"ease-out"
+
+});
+
+setTimeout(()=>{
+
+heart.remove();
+
+},3500);
+
+},280);
+
+/*==========================
+ Glow Pulse
+==========================*/
+
+if(glow){
+
+setInterval(()=>{
+
+glow.animate([
+
+{
+
+opacity:.4,
+
+transform:"translate(-50%,-50%) scale(1)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translate(-50%,-50%) scale(1.5)"
+
+},
+
+{
+
+opacity:.4,
+
+transform:"translate(-50%,-50%) scale(1)"
+
+}
+
+],{
+
+duration:2400
+
+});
+
+},2400);
+
+}
+
+});

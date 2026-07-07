@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="180"
+     height="320"
+     viewBox="0 0 180 320">
+
+    <defs>
+
+        <radialGradient id="petal"
+                        cx="50%"
+                        cy="40%"
+                        r="70%">
+
+            <stop offset="0%"
+                  stop-color="#ffb3c7"/>
+
+            <stop offset="100%"
+                  stop-color="#d40045"/>
+
+        </radialGradient>
+
+        <linearGradient id="stem"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%">
+
+            <stop offset="0%"
+                  stop-color="#4caf50"/>
+
+            <stop offset="100%"
+                  stop-color="#1b5e20"/>
+
+        </linearGradient>
+
+    </defs>
+
+    <!-- Stem -->
+
+    <rect
+        x="86"
+        y="90"
+        width="8"
+        height="190"
+        rx="4"
+        fill="url(#stem)"/>
+
+    <!-- Leaves -->
+
+    <ellipse
+        cx="62"
+        cy="175"
+        rx="28"
+        ry="12"
+        fill="#43a047"
+        transform="rotate(-28 62 175)"/>
+
+    <ellipse
+        cx="118"
+        cy="205"
+        rx="28"
+        ry="12"
+        fill="#43a047"
+        transform="rotate(28 118 205)"/>
+
+    <!-- Rose -->
+
+    <circle
+        cx="90"
+        cy="60"
+        r="18"
+        fill="url(#petal)"/>
+
+    <ellipse
+        cx="90"
+        cy="35"
+        rx="24"
+        ry="18"
+        fill="url(#petal)"/>
+
+    <ellipse
+        cx="70"
+        cy="55"
+        rx="20"
+        ry="15"
+        fill="url(#petal)"
+        transform="rotate(-28 70 55)"/>
+
+    <ellipse
+        cx="110"
+        cy="55"
+        rx="20"
+        ry="15"
+        fill="url(#petal)"
+        transform="rotate(28 110 55)"/>
+
+    <ellipse
+        cx="75"
+        cy="78"
+        rx="18"
+        ry="14"
+        fill="url(#petal)"
+        transform="rotate(-18 75 78)"/>
+
+    <ellipse
+        cx="105"
+        cy="78"
+        rx="18"
+        ry="14"
+        fill="url(#petal)"
+        transform="rotate(18 105 78)"/>
+
+</svg>

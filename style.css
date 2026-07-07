@@ -725,3 +725,35 @@ transform:rotate(-6deg);
 }
 
 }
+/* ==========================================
+   PART 6.5B
+========================================== */
+
+.love-glow{
+
+position:absolute;
+
+left:50%;
+
+top:52%;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(255,170,220,.55),
+rgba(255,255,255,.12),
+transparent);
+
+transform:translate(-50%,-50%);
+
+filter:blur(35px);
+
+z-index:1;
+
+pointer-events:none;
+
+}

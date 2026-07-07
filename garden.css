@@ -1,0 +1,2209 @@
+/* ==========================================
+   GARDEN.CSS - PART 1
+   Romantic Garden
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body.garden-page{
+
+background:#04111d;
+
+overflow-x:hidden;
+
+font-family:'Poppins',sans-serif;
+
+color:white;
+
+}
+
+/*========================
+Sky
+=========================*/
+
+.stars{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+radial-gradient(circle,#fff 1px,transparent 1px),
+
+radial-gradient(circle,#ffffffaa 1px,transparent 1px),
+
+radial-gradient(circle,#ffffff66 1px,transparent 1px);
+
+background-size:
+
+120px 120px,
+
+180px 180px,
+
+250px 250px;
+
+animation:
+
+starsMove 90s linear infinite;
+
+z-index:-5;
+
+opacity:.9;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-600px);
+
+}
+
+}
+
+/*========================
+Moon
+=========================*/
+
+.moon{
+
+position:absolute;
+
+right:70px;
+
+top:60px;
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+
+0 0 40px white,
+
+0 0 80px white,
+
+0 0 140px white;
+
+animation:
+
+moonGlow 4s ease infinite;
+
+}
+
+@keyframes moonGlow{
+
+50%{
+
+box-shadow:
+
+0 0 60px white,
+
+0 0 120px white,
+
+0 0 180px white;
+
+}
+
+}
+
+/*========================
+Garden
+=========================*/
+
+.garden{
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+height:240px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+transparent,
+
+#10331c 35%,
+
+#0c2615);
+
+overflow:hidden;
+
+}
+
+/*========================
+Grass
+=========================*/
+
+.garden::before{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+width:100%;
+
+height:140px;
+
+background:
+
+repeating-linear-gradient(
+
+90deg,
+
+#2f8f3d 0px,
+
+#3da24b 3px,
+
+transparent 6px,
+
+transparent 9px);
+
+clip-path:
+
+polygon(
+
+0 100%,
+
+1% 60%,
+
+2% 100%,
+
+3% 50%,
+
+4% 100%,
+
+5% 45%,
+
+6% 100%,
+
+100% 100%);
+
+animation:
+
+grassMove 3s ease-in-out infinite;
+
+}
+
+@keyframes grassMove{
+
+50%{
+
+transform:translateY(-3px);
+
+}
+
+}
+
+/*========================
+Floating Leaves
+=========================*/
+
+.garden::after{
+
+content:"🍃 🍃 🍃 🍃 🍃";
+
+position:absolute;
+
+bottom:100px;
+
+width:100%;
+
+font-size:28px;
+
+display:flex;
+
+justify-content:space-around;
+
+animation:
+
+leafMove 6s ease-in-out infinite;
+
+}
+
+@keyframes leafMove{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+/*========================
+Flower Base
+=========================*/
+
+.flowers{
+
+position:absolute;
+
+font-size:55px;
+
+animation:
+
+flowerBloom 3s ease forwards,
+
+flowerFloat 5s ease-in-out infinite;
+
+opacity:0;
+
+}
+
+@keyframes flowerBloom{
+
+0%{
+
+transform:
+
+translateY(50px)
+
+scale(.2);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes flowerFloat{
+
+50%{
+
+transform:
+
+translateY(-10px);
+
+}
+
+}
+
+/*========================
+Hero
+=========================*/
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:90px;
+
+position:relative;
+
+z-index:20;
+
+}
+
+/*========================
+Boy Girl
+=========================*/
+
+.boy,
+
+.girl{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+font-size:120px;
+
+animation:
+
+personFloat 4s ease infinite;
+
+}
+
+@keyframes personFloat{
+
+50%{
+
+transform:
+
+translateY(-10px);
+
+}
+
+}
+
+.bouquet{
+
+font-size:70px;
+
+margin-top:-30px;
+
+animation:
+
+bouquetMove 2s ease infinite;
+
+}
+
+@keyframes bouquetMove{
+
+50%{
+
+transform:
+
+rotate(8deg);
+
+}
+
+}
+
+.love{
+
+font-size:70px;
+
+animation:
+
+loveBeat 1s infinite;
+
+}
+
+@keyframes loveBeat{
+
+50%{
+
+transform:scale(1.25);
+
+}
+}
+
+/*========================
+Message
+=========================*/
+
+.message{
+
+max-width:850px;
+
+margin:auto;
+
+padding:80px 30px;
+
+text-align:center;
+
+line-height:2;
+
+font-size:20px;
+
+}
+
+.message h1{
+
+font-size:52px;
+
+margin-bottom:30px;
+
+color:#ffd4ea;
+
+text-shadow:
+
+0 0 25px pink;
+
+}
+
+.scroll{
+
+text-align:center;
+
+padding:60px;
+
+font-size:25px;
+
+animation:
+
+scrollDown 2s infinite;
+
+}
+
+@keyframes scrollDown{
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+}
+/* ==========================================
+   GARDEN.CSS PART-2
+==========================================*/
+
+/* ---------- Flower Position ---------- */
+
+.flower1{
+left:5%;
+bottom:120px;
+animation-delay:.5s;
+}
+
+.flower2{
+left:18%;
+bottom:135px;
+animation-delay:1.2s;
+}
+
+.flower3{
+left:32%;
+bottom:125px;
+animation-delay:2s;
+}
+
+.flower4{
+left:48%;
+bottom:145px;
+animation-delay:2.8s;
+}
+
+.flower5{
+left:65%;
+bottom:120px;
+animation-delay:3.5s;
+}
+
+.flower6{
+left:80%;
+bottom:140px;
+animation-delay:4s;
+}
+
+.flower7{
+left:92%;
+bottom:125px;
+animation-delay:4.8s;
+}
+
+/* ---------- Lily ---------- */
+
+.lily{
+
+position:absolute;
+
+font-size:70px;
+
+animation:
+
+lilyBloom 4s ease forwards,
+
+flowerFloat 4s ease-in-out infinite;
+
+filter:
+
+drop-shadow(0 0 20px white);
+
+}
+
+@keyframes lilyBloom{
+
+0%{
+
+transform:
+
+scale(.2)
+
+rotate(-30deg);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:
+
+scale(1)
+
+rotate(0deg);
+
+opacity:1;
+
+}
+
+}
+
+/* ---------- Rajanigandha ---------- */
+
+.rajanigandha{
+
+position:absolute;
+
+font-size:65px;
+
+animation:
+
+rajanigandhaBloom 5s ease forwards,
+
+flowerFloat 5s ease-in-out infinite;
+
+filter:
+
+drop-shadow(0 0 15px #fff);
+
+}
+
+@keyframes rajanigandhaBloom{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateY(60px)
+
+scale(.3);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+}
+
+/* ---------- Rose ---------- */
+
+.rose{
+
+position:absolute;
+
+font-size:60px;
+
+animation:
+
+roseBloom 3s ease forwards;
+
+filter:
+
+drop-shadow(0 0 15px hotpink);
+
+}
+
+@keyframes roseBloom{
+
+0%{
+
+opacity:0;
+
+transform:
+
+scale(.2)
+
+rotate(-180deg);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+scale(1)
+
+rotate(0);
+
+}
+
+}
+
+/* ---------- Tulip ---------- */
+
+.tulip{
+
+position:absolute;
+
+font-size:60px;
+
+animation:
+
+tulipBloom 4s ease forwards;
+
+}
+
+@keyframes tulipBloom{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateY(50px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+}
+
+/* ---------- Fireflies ---------- */
+
+.firefly{
+
+position:absolute;
+
+width:6px;
+
+height:6px;
+
+border-radius:50%;
+
+background:#ffff99;
+
+box-shadow:
+
+0 0 12px yellow,
+
+0 0 30px gold;
+
+animation:
+
+fireflyMove 8s linear infinite;
+
+}
+
+@keyframes fireflyMove{
+
+0%{
+
+transform:
+
+translate(0,0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+50%{
+
+transform:
+
+translate(80px,-120px);
+
+}
+
+100%{
+
+transform:
+
+translate(-100px,-250px);
+
+opacity:0;
+
+}
+
+}
+
+/* ---------- Floating Petals ---------- */
+
+.petal{
+
+position:absolute;
+
+font-size:26px;
+
+animation:
+
+petalFall 10s linear infinite;
+
+}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+
+translateY(-100px)
+
+rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(120vh)
+
+translateX(120px)
+
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ---------- Flower Glow ---------- */
+
+.flowers:hover{
+
+transform:scale(1.15);
+
+transition:.5s;
+
+filter:
+
+drop-shadow(0 0 30px pink);
+
+}
+
+/* ---------- Bouquet ---------- */
+
+.bouquet{
+
+animation:
+
+bouquetShake 2s ease-in-out infinite;
+
+}
+
+@keyframes bouquetShake{
+
+25%{
+
+transform:rotate(4deg);
+
+}
+
+50%{
+
+transform:rotate(-4deg);
+
+}
+
+75%{
+
+transform:rotate(4deg);
+
+}
+
+}
+
+/* ---------- Heart Glow ---------- */
+
+.love{
+
+color:#ff4f8b;
+
+text-shadow:
+
+0 0 10px pink,
+
+0 0 20px deeppink,
+
+0 0 40px hotpink;
+
+}
+
+/* ---------- Moon Light ---------- */
+
+.moon::after{
+
+content:"";
+
+position:absolute;
+
+width:250px;
+
+height:250px;
+
+left:-55px;
+
+top:-55px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+rgba(255,255,255,.18),
+
+transparent);
+
+animation:
+
+moonAura 5s ease infinite;
+
+}
+
+@keyframes moonAura{
+
+50%{
+
+transform:scale(1.15);
+
+opacity:.5;
+
+}
+
+}
+/* ==========================================
+   GARDEN.CSS PART-3
+   Premium Flower Garden
+==========================================*/
+
+/* ===== Premium Lily Plant ===== */
+
+.lily-plant{
+    position:absolute;
+    bottom:120px;
+    left:12%;
+    width:80px;
+    height:220px;
+    animation:swayPlant 4s ease-in-out infinite;
+}
+
+.lily-stem{
+    position:absolute;
+    left:38px;
+    bottom:0;
+    width:5px;
+    height:170px;
+    background:#2d9d55;
+    border-radius:20px;
+}
+
+.lily-leaf{
+    position:absolute;
+    width:55px;
+    height:18px;
+    background:#43b96b;
+    border-radius:100px;
+}
+
+.lily-leaf.one{
+    left:-22px;
+    bottom:45px;
+    transform:rotate(-35deg);
+}
+
+.lily-leaf.two{
+    left:8px;
+    bottom:85px;
+    transform:rotate(35deg);
+}
+
+.lily-leaf.three{
+    left:-24px;
+    bottom:125px;
+    transform:rotate(-30deg);
+}
+
+.lily-flower{
+
+    position:absolute;
+
+    top:0;
+
+    left:10px;
+
+    font-size:45px;
+
+    filter:
+
+    drop-shadow(0 0 18px white);
+
+    animation:
+
+    flowerOpen 3s ease forwards,
+
+    flowerGlow 2.5s infinite;
+
+}
+
+/* ===== Rajanigandha ===== */
+
+.rajanigandha-plant{
+
+position:absolute;
+
+bottom:120px;
+
+right:12%;
+
+width:70px;
+
+height:260px;
+
+animation:swayPlant 5s ease-in-out infinite;
+
+}
+
+.rajanigandha-stem{
+
+position:absolute;
+
+left:33px;
+
+bottom:0;
+
+width:5px;
+
+height:210px;
+
+background:#27994e;
+
+}
+
+.rajanigandha-bud{
+
+position:absolute;
+
+width:16px;
+
+height:16px;
+
+background:white;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 12px white;
+
+}
+
+.rajanigandha-bud:nth-child(2){
+
+left:28px;
+
+bottom:55px;
+
+}
+
+.rajanigandha-bud:nth-child(3){
+
+left:22px;
+
+bottom:78px;
+
+}
+
+.rajanigandha-bud:nth-child(4){
+
+left:34px;
+
+bottom:101px;
+
+}
+
+.rajanigandha-bud:nth-child(5){
+
+left:24px;
+
+bottom:126px;
+
+}
+
+.rajanigandha-bud:nth-child(6){
+
+left:33px;
+
+bottom:150px;
+
+}
+
+.rajanigandha-bud:nth-child(7){
+
+left:24px;
+
+bottom:176px;
+
+}
+
+/* ===== Fireflies ===== */
+
+.fireflies{
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.fireflies span{
+
+position:absolute;
+
+width:5px;
+
+height:5px;
+
+background:#fff9aa;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 15px gold;
+
+animation:
+
+flyLight 8s linear infinite;
+
+}
+
+@keyframes flyLight{
+
+0%{
+
+transform:
+
+translateY(100px);
+
+opacity:0;
+
+}
+
+30%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(-700px)
+
+translateX(120px);
+
+opacity:0;
+
+}
+
+}
+
+/* ===== Flower Glow ===== */
+
+@keyframes flowerGlow{
+
+50%{
+
+filter:
+
+drop-shadow(0 0 35px white);
+
+}
+
+}
+
+/* ===== Flower Open ===== */
+
+@keyframes flowerOpen{
+
+0%{
+
+opacity:0;
+
+transform:
+
+scale(.2)
+
+rotate(-40deg);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+scale(1)
+
+rotate(0);
+
+}
+
+}
+
+/* ===== Plant Sway ===== */
+
+@keyframes swayPlant{
+
+0%{
+
+transform:rotate(-2deg);
+
+}
+
+50%{
+
+transform:rotate(2deg);
+
+}
+
+100%{
+
+transform:rotate(-2deg);
+
+}
+
+}
+
+/* ===== Shooting Star ===== */
+
+.shooting-star{
+
+position:absolute;
+
+top:80px;
+
+left:-150px;
+
+width:180px;
+
+height:2px;
+
+background:white;
+
+box-shadow:
+
+0 0 18px white;
+
+transform:rotate(-25deg);
+
+animation:
+
+shootingStar 9s linear infinite;
+
+}
+
+@keyframes shootingStar{
+
+0%{
+
+left:-200px;
+
+top:60px;
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+100%{
+
+left:130%;
+
+top:260px;
+
+opacity:0;
+
+}
+
+}
+
+/* ===== Romantic Text ===== */
+
+.quote{
+
+position:absolute;
+
+top:12%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:32px;
+
+font-weight:600;
+
+color:#ffe3ef;
+
+text-shadow:
+
+0 0 20px hotpink;
+
+animation:
+
+fadeQuote 4s ease-in-out infinite;
+
+}
+
+@keyframes fadeQuote{
+
+0%,100%{
+
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+/*==========================================
+PART 4
+Shanto ❤️ Sumu
+==========================================*/
+
+/* Character Area */
+
+.hero{
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-end;
+
+gap:140px;
+
+height:100vh;
+
+position:relative;
+
+}
+
+/*=========================
+Shanto
+=========================*/
+
+.shanto{
+
+position:relative;
+
+width:170px;
+
+height:360px;
+
+animation:walk 4s ease-in-out infinite;
+
+}
+
+/* Head */
+
+.shanto .head{
+
+width:75px;
+
+height:75px;
+
+background:#ffd8b0;
+
+border-radius:50%;
+
+margin:auto;
+
+position:relative;
+
+z-index:5;
+
+}
+
+/* Hair */
+
+.shanto .hair{
+
+position:absolute;
+
+top:-8px;
+
+left:8px;
+
+width:60px;
+
+height:30px;
+
+background:#111;
+
+border-radius:50px;
+
+}
+
+/* Body */
+
+.shanto .body{
+
+width:70px;
+
+height:130px;
+
+background:#1f5eff;
+
+margin:auto;
+
+margin-top:-6px;
+
+border-radius:18px;
+
+}
+
+/* Arms */
+
+.shanto .left-arm,
+
+.shanto .right-arm{
+
+position:absolute;
+
+width:16px;
+
+height:95px;
+
+background:#ffd8b0;
+
+border-radius:20px;
+
+top:88px;
+
+}
+
+.shanto .left-arm{
+
+left:30px;
+
+transform:rotate(20deg);
+
+}
+
+.shanto .right-arm{
+
+right:22px;
+
+transform:rotate(-40deg);
+
+}
+
+/* Legs */
+
+.shanto .legs{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.shanto .legs div{
+
+width:18px;
+
+height:120px;
+
+background:#222;
+
+border-radius:20px;
+
+}
+
+/*=========================
+Rose
+=========================*/
+
+.rose-hand{
+
+position:absolute;
+
+right:-10px;
+
+top:120px;
+
+font-size:34px;
+
+transform:rotate(-25deg);
+
+animation:roseMove 2s ease-in-out infinite;
+
+filter:drop-shadow(0 0 12px crimson);
+
+}
+
+@keyframes roseMove{
+
+50%{
+
+transform:rotate(-18deg)
+translateY(-6px);
+
+}
+
+}
+
+/*=========================
+Bouquet
+=========================*/
+
+.bouquet{
+
+position:absolute;
+
+right:10px;
+
+top:160px;
+
+font-size:48px;
+
+animation:gift 2.5s ease-in-out infinite;
+
+}
+
+@keyframes gift{
+
+50%{
+
+transform:translateY(-8px)
+rotate(5deg);
+
+}
+
+}
+
+/*=========================
+Sumu
+=========================*/
+
+.sumu{
+
+position:relative;
+
+width:170px;
+
+height:360px;
+
+animation:happy 3s ease-in-out infinite;
+
+}
+
+/* Head */
+
+.sumu .head{
+
+width:75px;
+
+height:75px;
+
+background:#ffd8b0;
+
+border-radius:50%;
+
+margin:auto;
+
+position:relative;
+
+}
+
+/* Hair */
+
+.sumu .hair{
+
+position:absolute;
+
+top:-10px;
+
+left:5px;
+
+width:65px;
+
+height:55px;
+
+background:#1a1a1a;
+
+border-radius:45px;
+
+}
+
+/* Dress */
+
+.sumu .dress{
+
+width:90px;
+
+height:150px;
+
+margin:auto;
+
+margin-top:-5px;
+
+background:linear-gradient(#ff85b5,#ff5f95);
+
+border-radius:45px;
+
+}
+
+/* Hands */
+
+.sumu .hands{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:-110px;
+
+padding:0 18px;
+
+}
+
+.sumu .hands div{
+
+width:14px;
+
+height:85px;
+
+background:#ffd8b0;
+
+border-radius:20px;
+
+}
+
+/* Smile */
+
+.sumu .head::after{
+
+content:"😊";
+
+position:absolute;
+
+left:19px;
+
+top:18px;
+
+font-size:32px;
+
+}
+
+/*=========================
+Love Text
+=========================*/
+
+.propose-text{
+
+position:absolute;
+
+top:80px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:34px;
+
+font-weight:bold;
+
+color:#ffd6e8;
+
+text-shadow:0 0 25px hotpink;
+
+animation:textFade 5s infinite;
+
+}
+
+@keyframes textFade{
+
+0%,100%{
+
+opacity:0;
+
+}
+
+40%,70%{
+
+opacity:1;
+
+}
+
+}
+
+/*=========================
+Floating Hearts
+=========================*/
+
+.big-heart{
+
+position:absolute;
+
+font-size:38px;
+
+animation:heartFloat 5s linear infinite;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(20px);
+
+opacity:0;
+
+}
+
+30%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-250px);
+
+opacity:0;
+
+}
+
+}
+
+/*=========================
+Animation
+=========================*/
+
+@keyframes walk{
+
+50%{
+
+transform:translateX(15px);
+
+}
+
+
+}
+
+@keyframes happy{
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+/* ==========================================
+   GARDEN.CSS PART-5
+   Proposal Scene
+==========================================*/
+
+/* Proposal Container */
+
+.proposal-scene{
+
+position:relative;
+
+width:100%;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-end;
+
+gap:180px;
+
+overflow:hidden;
+
+}
+
+/* Shanto Kneel */
+
+.shanto.propose{
+
+animation:kneel 2s forwards;
+
+}
+
+@keyframes kneel{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:
+
+translateX(35px)
+
+translateY(15px)
+
+rotate(-8deg);
+
+}
+
+}
+
+/* Rose Offer */
+
+.rose-hand{
+
+animation:
+
+offerRose 2s ease infinite;
+
+}
+
+@keyframes offerRose{
+
+0%{
+
+transform:
+
+translateX(0)
+
+rotate(-25deg);
+
+}
+
+50%{
+
+transform:
+
+translateX(22px)
+
+rotate(-8deg)
+
+scale(1.15);
+
+}
+
+100%{
+
+transform:
+
+translateX(0)
+
+rotate(-25deg);
+
+}
+
+}
+
+/* Bouquet Glow */
+
+.bouquet{
+
+filter:
+
+drop-shadow(0 0 25px hotpink);
+
+animation:
+
+bouquetGlow 2.5s infinite;
+
+}
+
+@keyframes bouquetGlow{
+
+50%{
+
+filter:
+
+drop-shadow(0 0 45px deeppink);
+
+transform:
+
+translateY(-8px)
+
+scale(1.05);
+
+}
+
+}
+
+/* Sumu Smile */
+
+.sumu{
+
+animation:
+
+blush 3s ease infinite;
+
+}
+
+@keyframes blush{
+
+50%{
+
+transform:
+
+translateY(-12px)
+
+scale(1.03);
+
+}
+
+}
+
+/* Blush Effect */
+
+.sumu .head::before{
+
+content:"💗";
+
+position:absolute;
+
+left:-12px;
+
+top:18px;
+
+font-size:20px;
+
+animation:
+
+blushHeart 2s infinite;
+
+}
+
+@keyframes blushHeart{
+
+50%{
+
+transform:
+
+translateY(-8px)
+
+scale(1.4);
+
+opacity:.8;
+
+}
+
+}
+
+/* Flower Rain */
+
+.flower-rain{
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.flower-rain span{
+
+position:absolute;
+
+top:-50px;
+
+font-size:28px;
+
+animation:
+
+petalRain linear infinite;
+
+}
+
+@keyframes petalRain{
+
+0%{
+
+transform:
+
+translateY(-50px)
+
+rotate(0);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(120vh)
+
+translateX(120px)
+
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Romantic Quote */
+
+.quote-box{
+
+position:absolute;
+
+top:10%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+padding:20px 35px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+box-shadow:0 0 25px rgba(255,192,203,.35);
+
+max-width:700px;
+
+}
+
+.quote-box h2{
+
+font-size:38px;
+
+color:#ffd7ea;
+
+margin-bottom:20px;
+
+text-shadow:0 0 18px hotpink;
+
+}
+
+.quote-box p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#fff;
+
+}
+
+/* Love Ring */
+
+.love-ring{
+
+position:absolute;
+
+left:50%;
+
+top:45%;
+
+transform:translate(-50%,-50%);
+
+width:120px;
+
+height:120px;
+
+border:2px solid rgba(255,255,255,.35);
+
+border-radius:50%;
+
+animation:ring 3s infinite;
+
+}
+
+@keyframes ring{
+
+0%{
+
+transform:
+
+translate(-50%,-50%)
+
+scale(.5);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translate(-50%,-50%)
+
+scale(3);
+
+opacity:0;
+
+}
+
+}
+
+/* Camera Zoom */
+
+.proposal-scene{
+
+animation:
+
+cameraZoom 10s ease forwards;
+
+}
+
+@keyframes cameraZoom{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+/* Ending Glow */
+
+.final-love{
+
+position:absolute;
+
+bottom:50px;
+
+width:100%;
+
+text-align:center;
+
+font-size:34px;
+
+font-weight:700;
+
+color:#ffe8f2;
+
+text-shadow:
+
+0 0 20px deeppink,
+
+0 0 40px hotpink;
+
+animation:fadeLove 4s infinite;
+
+}
+
+@keyframes fadeLove{
+
+0%,100%{
+
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+}
